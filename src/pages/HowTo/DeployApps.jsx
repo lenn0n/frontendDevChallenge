@@ -62,7 +62,7 @@ const DeployApps = () => {
   
   return (
     <>
-      <div className="d-flex justify-content-center ">
+      <div className="d-flex justify-content-center m-4">
         <div>  
           <h1 className="text-info">Firebase</h1>
           <p>With <a className="text-info" href="https://firebase.google.com/docs/hosting">Firebase hosting</a>, 
