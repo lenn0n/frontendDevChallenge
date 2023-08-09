@@ -1,0 +1,41 @@
+{
+  "name": "devchallenges",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack-dev-server --mode development --open --hot",
+    "build": "webpack --mode production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lenn0n/devchallenges.git"
+  },
+  "keywords": [
+    "DEV",
+    "CHALLENGES"
+  ],
+  "author": "Lennon Benedict Jasnsuy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lenn0n/devchallenges/issues"
+  },
+  "homepage": "https://github.com/lenn0n/devchallenges#readme",
+  "dependencies": {
+    "babel-loader": "^9.1.3",
+    "bootstrap": "^5.3.1",
+    "css-loader": "^6.8.1",
+    "html-webpack-plugin": "^5.5.3",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.14.2",
+    "style-loader": "^3.3.3",
+    "webpack": "^5.88.2",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^4.15.1"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.22.10",
+    "@babel/preset-react": "^7.22.5"
+  }
+}
