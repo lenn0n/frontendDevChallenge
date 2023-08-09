@@ -10,10 +10,10 @@ const NotFound = () => {
 
   return (<>
     <div className="container row align-items-center justify-content-center m-auto">
-      <div className="col-lg-6 col-sm-12 img-crow ">
+      <div className="col-lg-6 col-sm-12 left-panel">
        <img src={Scarecrow}/>
       </div>
-      <div className="col-lg-6 col-sm-12">
+      <div className="col-lg-6 col-sm-12 right-panel">
         <div className="title">
             I have bad news for you
         </div>
