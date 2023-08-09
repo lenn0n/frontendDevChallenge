@@ -4,6 +4,7 @@ import DefaultWrapper from "@components/Wrappers/DefaultWrapper";
 
 import NotFound from "@pages/FirstStage/NotFound"
 import DeployApps from "@pages/HowTo/DeployApps";
+import ReactBoilerplate from "@pages/HowTo/ReactBoilerplate";
 
 export default [
   {
@@ -18,6 +19,13 @@ export default [
     element: 
     <DefaultWrapper text="Deploying App">
       <DeployApps/>
+    </DefaultWrapper>,
+  },
+  {
+    path: "/react-boilerplate",
+    element: 
+    <DefaultWrapper text="React Boilerplate">
+      <ReactBoilerplate/>
     </DefaultWrapper>,
   }
 ]
