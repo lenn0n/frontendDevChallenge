@@ -5,6 +5,7 @@ import publicRoutes from "./public";
 
 import "bootstrap/dist/css/bootstrap.css"
 import "@assets/css/style.css"
+import "@assets/fonts/import-fonts.css"
 
 const routePaths = createBrowserRouter([
   ...protectedRoutes,
