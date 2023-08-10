@@ -147,10 +147,10 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 .interior-consultant-container{
-  background-color: black;
+  background: #181719;
   color: white;
   width: 1440px;
-  height: 100vh;
+  height: 100%;
   padding: 50px;
   box-shadow: 0px 2px 25px 0px #0000001A;
 }
@@ -188,8 +188,14 @@ p, h1, h2, h3, h4, h5, h6 {
   font-family: Montserrat
 }
 
-
-
+.ic-author-container{
+  box-shadow: 0px 4px 4px 0px #00000040;
+  background: #181719;
+  width: 410px;
+  height: 189px;
+  margin-top: -100px;
+  margin-right: 20px;
+}
 
 @media (max-width: 768px) {
   .left-panel{
@@ -210,6 +216,9 @@ p, h1, h2, h3, h4, h5, h6 {
   }
   .container{
     height: auto;
+  }
+  .ic-header-menu{
+    display: none;
   }
 
 }

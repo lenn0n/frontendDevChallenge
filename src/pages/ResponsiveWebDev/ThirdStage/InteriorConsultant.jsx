@@ -31,8 +31,12 @@ const InteriorConsultant = () => {
               </div>
             </div>
 
-            <div className="col-lg-6   col-sm-12 d-flex align-items-center justify-content-between ">
-              <img src={ICCover} alt="Loading" height="555px"/>
+            <div className="col-lg-6  col-sm-12 ">
+              <img src={ICCover} alt="Loading"/>
+              <div className="d-flex justify-content-end">
+
+              <div className="ic-author-container"></div>
+              </div>
             </div>
           </div>
         </div>
