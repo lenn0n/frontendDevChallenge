@@ -9,20 +9,22 @@ const NotFound = () => {
   }
 
   return (<>
-    <div className="container row align-items-center justify-content-center m-auto">
-      <div className="col-lg-6 col-sm-12 left-panel">
-       <img src={Scarecrow}/>
-      </div>
-      <div className="col-lg-6 col-sm-12 right-panel">
-        <div className="title">
-            I have bad news for you
+    <div className="container d-flex align-items-center justify-content-center">
+      <div className="row align-items-center justify-content-center">
+        <div className="col-lg-6 col-sm-12 left-panel">
+          <img src={Scarecrow}/>
         </div>
-        <div className="desc mt-4 mb-4">
-            The page you are looking for might be removed or is temporarily unavailable
+        <div className="col-lg-6 col-sm-12 right-panel">
+          <div className="title">
+              I have bad news for you
+          </div>
+          <div className="desc mt-4 mb-4">
+              The page you are looking for might be removed or is temporarily unavailable
+          </div>
+          <button onClick={handleBackToHome} className="btnHome mt-4 mb-4">
+            Back To Homepage
+          </button>
         </div>
-        <button onClick={handleBackToHome} className="btnHome mt-4 mb-4">
-          Back To Homepage
-        </button>
       </div>
     </div>
   </>)

@@ -2,3 +2,13 @@
      font-family: myPTSerif;
      src: url(../fonts/PTSerif-Regular.ttf);
 }
+
+@font-face {
+     font-family: Montserrat;
+     src: url(../fonts/Montserrat.ttf);
+}
+
+@font-face {
+     font-family: Lora;
+     src: url(../fonts/Lora.ttf);
+}

@@ -4,6 +4,7 @@ import DefaultWrapper from "@components/Wrappers/DefaultWrapper";
 import HomePage from "@pages/Homepage/Home"
 import NotFound from "@pages/ResponsiveWebDev/FirstStage/NotFound"
 import TeamPage from "@pages/ResponsiveWebDev/SecondStage/TeamPage"
+import InteriorConsultant from "@pages/ResponsiveWebDev/ThirdStage/InteriorConsultant"
 import DeployApps from "@pages/HowTo/DeployApps";
 import ReactBoilerplate from "@pages/HowTo/ReactBoilerplate";
 
@@ -30,6 +31,13 @@ export default [
     element: 
     <DefaultWrapper text="Team Page">
       <TeamPage/>
+    </DefaultWrapper>,
+  },
+  {
+    path: "/interior-consultant",
+    element: 
+    <DefaultWrapper text="Interior Consultant">
+      <InteriorConsultant/>
     </DefaultWrapper>,
   },
   {

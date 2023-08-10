@@ -146,6 +146,50 @@ p, h1, h2, h3, h4, h5, h6 {
   margin-top: 60px;
 }
 
+.interior-consultant-container{
+  background-color: black;
+  color: white;
+  width: 1440px;
+  height: 100vh;
+  padding: 50px;
+  box-shadow: 0px 2px 25px 0px #0000001A;
+}
+
+.ic-header-text{
+  font-family: Montserrat;
+}
+
+.ic-header-logo{
+  font-size: 14px;
+  padding: 4px;
+  font-weight: 200;
+  border: 1px solid white;
+}
+
+.ic-header-menu{
+  display: flex;
+}
+
+.ic-header-menu-selected{
+  font-weight: bold;
+  border-bottom: 3px solid white;
+}
+
+
+.ic-body-title{
+  font-size: 48px;
+  font-weight: 500;
+  font-family: Lora
+}
+
+.ic-body-desc{
+  font-size: 24px;
+  font-weight: 400;
+  font-family: Montserrat
+}
+
+
+
 
 @media (max-width: 768px) {
   .left-panel{
