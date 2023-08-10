@@ -66,7 +66,7 @@ p, h1, h2, h3, h4, h5, h6 {
   /* position: fixed;
   left: 50%;
   transform: translate(-50%, 0); */
-  bottom: 0;
+  /* bottom: 0; */
   font-weight: 500;
   color: #BDBDBD;
   margin: 20px;
@@ -110,6 +110,7 @@ p, h1, h2, h3, h4, h5, h6 {
   background-color: #2b2b2b;
   padding: 1em;
   margin: 0.5em 0;
+  white-space: pre-wrap;
 }
 
 @media (max-width: 768px) {
@@ -128,5 +129,8 @@ p, h1, h2, h3, h4, h5, h6 {
   }
   .desc{
     text-align: center;
+  }
+  .container{
+    height: auto;
   }
 }

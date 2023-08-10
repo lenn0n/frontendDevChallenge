@@ -4,21 +4,23 @@ const ReactBoilerPlate = () => {
 
   const CreatingAppSteps = [
     {
-      text: "Step 1. Install the React and Webpack",
-      code: "npm i react react-dom webpack webpack-cli webpack-dev-server style-loader css-loader"
+      text: "Before you start, make sure you have NodeJS in your machine. In your directory, type:",
+      code: "npm init"
     },
     {
-      text: "Step 2. Install Babel to transpile code for older browsers",
-      code: "npm install --save-dev @babel/preset-react  @babel/preset-env"
+      text: "Next, install the React, RouterDOM, Loaders and Webpack",
+      code: "npm i react react-dom webpack webpack-cli webpack-dev-server html-webpack-plugin babel-loader style-loader css-loader react-router-dom"
     },
     {
-      text: "Step 3. Create file '.babelrc', put value below and save" ,
-      code: `{
-        "presets": ["@babel/preset-react", "@babel/preset-env"]
-      }`
+      text: "Install Babel to transpile code for older browsers",
+      code: "npm i --save-dev @babel/preset-react @babel/preset-env"
     },
     {
-      text: "Step 4. Create file 'webpack.config.js' and copy paste the configuration",
+      text: "Create file '.babelrc', put value below and save" ,
+      code: `{ "presets": ["@babel/preset-react", "@babel/preset-env"] }`
+    },
+    {
+      text: "Then, create file 'webpack.config.js' in your root folder and copy paste the config below",
       code: `
       const path = require('path');
       const HtmlWebpackPlugin = require('html-webpack-plugin');
@@ -27,7 +29,7 @@ const ReactBoilerPlate = () => {
         entry: './src/index.js',
         output: {
           path: path.join(__dirname, '/build'),
-          filename: 'main.js
+          filename: 'main.js'
         },
         devServer: {
           historyApiFallback: true,
@@ -75,6 +77,50 @@ const ReactBoilerPlate = () => {
            },
       }
       ` 
+    }, 
+    {
+      text: "Next, in your root folder, Create /public folder and put index.html file inside. (./public/index.html)",
+      code: `
+      <!DOCTYPE html>
+      <html lang="en">
+      <head>
+           <meta charset="UTF-8">
+           <meta name="viewport" content="width=device-width, initial-scale=1.0">
+           <link rel="icon" type="image/x-icon" href="YOUR_FAVICON">
+           <title>WEBSITE_TITLE</title>
+      </head>
+      <body>
+           <div id="root"></div>
+      </body>
+      </html>
+      `
+    },
+    {
+      text: "Create /src folder and put index.js file inside. (./src/index.js)",
+      code: `
+      import React from 'react';
+      import ReactDOM from 'react-dom/client';
+      
+      const root = ReactDOM.createRoot(document.getElementById('root'));
+      root.render(<div>Hello World</div>)
+      `
+    },
+    {
+      text: "Replace scripts in your package.json",
+      code: ` 
+      "scripts": {
+        "start": "webpack-dev-server --mode development --open --hot",
+        "build": "webpack --mode production"
+      }
+      `
+    },
+    {
+      text: "Finally, run your project, you will be redirect to http://localhost:1000. You can change the port in webpack.config.js",
+      code: `npm start`
+    },
+    {
+      text: "I didn't include the react-router-dom here simply because the documentation itself is very straightforward. ",
+      code: "https://reactrouter.com/en/main"
     }
   ]
 
@@ -88,11 +134,12 @@ const ReactBoilerPlate = () => {
   }
 
   return ( <>
-    <div className="container">
+    <div className="d-flex justify-content-center m-4">
       <div>
-        <h1 className="text-info">React Boilerplate</h1>
+        <h1 className="text-info">React + Webpack5 Boilerplate</h1>
         <p> Setting up, installing dependencies, checking version compatibility is one of the hardest part of being a developer. </p>
-        <p> It takes a lot of time to get started. In this blog, we are going to make it easier and faster. </p>
+        <p> It takes a lot of time to get started. In this blog, we are going to make it easier and faster". </p>
+        <p> Or you can just clone my repo: <a href="https://github.com/lenn0n/react-webpack-boileplate.git">https://github.com/lenn0n/react-webpack-boileplate.git</a></p> 
         { CreatingAppSteps.map((data) => { return <Step text={data.text} code={data.code}/> }) }
       </div>
     </div> 
