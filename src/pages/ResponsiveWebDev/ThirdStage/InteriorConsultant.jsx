@@ -1,18 +1,26 @@
-import React from "react";
+import React, { useState } from "react";
 
 import ICCover from "@assets/images/ic-cover.png";
 import ICAvatar from "@assets/images/ic-avatar.png";
+import Burger from "@assets/images/burger.png";
+
 const InteriorConsultant = () => {
+  const [ openNav, setOpenNav ] = useState(false)
   return <>
       <div className="d-flex align-items-center justify-content-center">
         <div className="interior-consultant-container">
-          <div className="d-flex justify-content-between">
-            <div className="ic-header-logo">THIS INTERIOR</div>
+          <div className="d-flex justify-content-between align-items-center">
+            <div>
+              <div className="ic-header-logo">THIS INTERIOR</div>
+            </div>
             <div className="ic-header-menu gap-5">
               <div className="ic-header-menu-selected">Home</div>
               <div>Collection</div>
               <div>About</div>
               <div>Contact</div>
+            </div>
+            <div className="hamburger" role="button" onClick={()=> {setOpenNav(!openNav)}}>
+              <img src={Burger} width={50} height={50} alt=""/>
             </div>
           </div>
 
@@ -32,10 +40,20 @@ const InteriorConsultant = () => {
             </div>
 
             <div className="col-lg-6  col-sm-12 ">
-              <img src={ICCover} alt="Loading"/>
+              <img src={ICCover} alt="Loading" className="ic-cover"/>
               <div className="d-flex justify-content-end">
-
-              <div className="ic-author-container"></div>
+                <div className="ic-author-container">
+                  <div className="d-flex align-items-center m-4">
+                    <img src={ICAvatar} className="ic-avatar" alt="author" height={50} width={50}/>
+                    <div className="ms-3">
+                      <div className="ic-author">Aliza Webber</div>
+                      <div className="ic-position">Interior designer</div>
+                    </div>
+                  </div>
+                  <div className="ic-banner ps-4 pe-4 pt-1" style={{width: '287px'}}>
+                  Designed in 2020 by Aliza Webber
+                  </div>
+                </div>
               </div>
             </div>
           </div>
