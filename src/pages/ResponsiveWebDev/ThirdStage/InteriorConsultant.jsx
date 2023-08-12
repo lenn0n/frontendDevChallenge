@@ -7,7 +7,20 @@ import Burger from "@assets/images/burger.png";
 const InteriorConsultant = () => {
   const [ openNav, setOpenNav ] = useState(false)
   return <>
-      <div className="d-flex align-items-center justify-content-center">
+      <div className={`offcanvas2 ${openNav? '--show' : ''}`} >
+        <div className="d-flex justify-content-end">
+          <span className="text-white fw-bold m-4 me-5" onClick={()=> {setOpenNav(!openNav)}} role="button">X</span>
+        </div>
+
+        <div className="d-flex flex-column gap-4 h-100 justify-content-center align-items-center text-white">
+      
+              <div className="ic-header-menu-selected">Home</div>
+              <div>Collection</div>
+              <div>About</div>
+              <div>Contact</div>
+        </div>
+      </div>
+      <div className="d-flex align-items-center justify-content-center" >
         <div className="interior-consultant-container">
           <div className="d-flex justify-content-between align-items-center">
             <div>

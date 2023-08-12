@@ -179,6 +179,21 @@
   font-weight: 700;
 }
 
+.offcanvas2{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: 2;
+  background-color: #181719;
+  margin-left: 100%;
+  transition: all 0.3s ease-in-out;
+}
+
+.offcanvas2.--show{
+  margin-left: 0%;
+}
+
+
 @media (max-width: 768px) {
   .left-panel{
     margin-top: 30px;
@@ -205,19 +220,11 @@
   .hamburger{
     display: block;
   }
+}
 
-  .nav-menu{
-    /* display: none; */
-    margin-left: 400px;
-    position: absolute;
-    background: black;
-    width: 400px;
-    height: 100vh;
-    z-index: 0;
-    transition: all 0.3s ease-in-out;
-  }
-  .nav-menu.--active{
-    margin-left: 0px;
+@media (min-width: 768px) {
+  .offcanvas2{
+    margin-left: 100% !important;
   }
 }
 
@@ -260,5 +267,11 @@
     font-size: 14px;
     font-weight: 500;
     font-family: Lora
+  }
+}
+
+@media (max-width: 550px) {
+.interior-consultant-container{
+    padding: 14px;
   }
 }
