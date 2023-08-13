@@ -216,9 +216,23 @@
   font-family: Montserrat;
   font-weight: 500;
   font-size: 14px;
-  max-width: 70%;
+  max-width: 48%;
   margin-top: 20px;
+  font-family: Montserrat;
+  font-style: italic;
+  line-height: 17px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #4F4F4F;
 }
+.rp-header-desc-prefix{
+  color: #C4C4C4;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  font-style: normal !important;
+}
+
 
 .rp-header-cover-container img {
   width: 100%;

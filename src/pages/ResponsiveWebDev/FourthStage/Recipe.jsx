@@ -8,7 +8,8 @@ const Recipe = () => {
         <div>
           <div>
             <div className="rp-header-title">Classic Cheesecake Recipe</div>
-            <div className="rp-header-desc">
+            <div className="rp-header-desc d-flex gap-1">
+            <span className="rp-header-desc-prefix">:::</span>
             Look no further for a creamy and ultra smooth classic cheesecake recipe! 
             Paired with a buttery graham cracker crust, no one can deny its simple decadence. 
             For the best results, bake in a water bath.
