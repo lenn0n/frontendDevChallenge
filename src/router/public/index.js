@@ -7,6 +7,7 @@ import TeamPage from "@pages/ResponsiveWebDev/SecondStage/TeamPage"
 import InteriorConsultant from "@pages/ResponsiveWebDev/ThirdStage/InteriorConsultant"
 import DeployApps from "@pages/HowTo/DeployApps";
 import ReactBoilerplate from "@pages/HowTo/ReactBoilerplate";
+import Recipe from "@pages/ResponsiveWebDev/FourthStage/Recipe";
 
 export default [
   {
@@ -38,6 +39,13 @@ export default [
     element: 
     <DefaultWrapper text="Interior Consultant">
       <InteriorConsultant/>
+    </DefaultWrapper>,
+  },
+  {
+    path: "/recipe",
+    element: 
+    <DefaultWrapper text="Recipe Page">
+      <Recipe/>
     </DefaultWrapper>,
   },
   {

@@ -19,7 +19,6 @@ const InteriorConsultant = () => {
               <div className="ic-header-item" role="button">Contact</div>
         </div>
       </div>
-      <div className="d-flex align-items-center justify-content-center" >
         <div className="interior-consultant-container">
           <div className="d-flex justify-content-between align-items-center">
             <div>
@@ -70,7 +69,6 @@ const InteriorConsultant = () => {
             </div>
           </div>
         </div>
-      </div>
   </>
 }
 

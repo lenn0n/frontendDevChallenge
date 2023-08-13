@@ -12,3 +12,8 @@
      font-family: Lora;
      src: url(../fonts/Lora.ttf);
 }
+
+@font-face {
+     font-family: Playfair;
+     src: url(../fonts/Playfair.ttf);
+}
