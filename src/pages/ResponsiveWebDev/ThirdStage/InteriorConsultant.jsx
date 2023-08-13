@@ -8,16 +8,15 @@ const InteriorConsultant = () => {
   const [ openNav, setOpenNav ] = useState(false)
   return <>
       <div className={`offcanvas2 ${openNav? '--show' : ''}`} >
-        <div className="d-flex justify-content-end">
-          <span className="text-white fw-bold m-4 me-5" onClick={()=> {setOpenNav(!openNav)}} role="button">X</span>
+        <div className="close-nav mt-4">
+          <span class="material-icons text-white" onClick={()=> {setOpenNav(!openNav)}} role="button">ic_close</span>
         </div>
 
         <div className="d-flex flex-column gap-4 h-100 justify-content-center align-items-center text-white">
-      
-              <div className="ic-header-menu-selected">Home</div>
-              <div>Collection</div>
-              <div>About</div>
-              <div>Contact</div>
+              <div className="ic-header-item ic-header-menu-selected" role="button">Home</div>
+              <div className="ic-header-item" role="button">Collection</div>
+              <div className="ic-header-item" role="button">About</div>
+              <div className="ic-header-item" role="button">Contact</div>
         </div>
       </div>
       <div className="d-flex align-items-center justify-content-center" >
@@ -27,10 +26,10 @@ const InteriorConsultant = () => {
               <div className="ic-header-logo">THIS INTERIOR</div>
             </div>
             <div className="ic-header-menu gap-5">
-              <div className="ic-header-menu-selected">Home</div>
-              <div>Collection</div>
-              <div>About</div>
-              <div>Contact</div>
+              <div className="ic-header-item ic-header-menu-selected" role="button">Home</div>
+              <div className="ic-header-item" role="button">Collection</div>
+              <div className="ic-header-item" role="button">About</div>
+              <div className="ic-header-item" role="button">Contact</div>
             </div>
             <div className="hamburger" role="button" onClick={()=> {setOpenNav(!openNav)}}>
               <img src={Burger} width={50} height={50} alt=""/>
@@ -46,8 +45,8 @@ const InteriorConsultant = () => {
                 <div className="ic-body-desc">
                   A full-Service residential & commercial interior design and staging company offering professional organizing & eco-services.
                 </div>
-                <div className="mt-5 fw-bold ic-header-text mb-4">
-                  Read more
+                <div className="mt-5 fw-bold ic-header-text mb-4 d-flex gap-2" role="button">
+                  Read more <span class="material-icons">arrow_right_alt</span>
                 </div>
               </div>
             </div>
