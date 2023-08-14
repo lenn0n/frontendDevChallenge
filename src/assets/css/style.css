@@ -238,8 +238,36 @@
   width: 100%;
   border-radius: 12px;
   margin-top: 20px;
+  margin-bottom: 48px;
 }
 
+.rp-ingredient-title{
+  font-family: Playfair;
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 0em;
+  text-align: left;
+  margin-bottom: 40px;
+}
+
+.rp-ingredient-item{
+  font-family: Playfair;
+  font-size: 18px;
+  font-style: italic;
+  font-weight: 400;
+  letter-spacing: 0em;
+  text-align: left;
+  margin-bottom: 30px;
+}
+
+.rp-ingredient-sub-item{
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 25px;
+  letter-spacing: 0em;
+  text-align: left;
+}
 
 @media (max-width: 768px) {
   .left-panel{
@@ -272,6 +300,12 @@
 @media (min-width: 769px) {
   .offcanvas2{
     margin-left: 100% !important;
+  }
+  .ing-items{
+    order: 2 !important
+  }
+  .ing-summary{
+    order: 1 !important
   }
 }
 
