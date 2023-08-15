@@ -9,7 +9,7 @@ const InteriorConsultant = () => {
   return <>
       <div className={`offcanvas2 ${openNav? '--show' : ''}`} >
         <div className="close-nav mt-4">
-          <span class="material-icons text-white" onClick={()=> {setOpenNav(!openNav)}} role="button">ic_close</span>
+          <span className="material-icons text-white" onClick={()=> {setOpenNav(!openNav)}} role="button">ic_close</span>
         </div>
 
         <div className="d-flex flex-column gap-4 h-100 justify-content-center align-items-center text-white">
@@ -45,7 +45,7 @@ const InteriorConsultant = () => {
                   A full-Service residential & commercial interior design and staging company offering professional organizing & eco-services.
                 </div>
                 <div className="mt-5 fw-bold ic-header-text mb-4 d-flex gap-2" role="button">
-                  Read more <span class="material-icons">arrow_right_alt</span>
+                  Read more <span className="material-icons">arrow_right_alt</span>
                 </div>
               </div>
             </div>
