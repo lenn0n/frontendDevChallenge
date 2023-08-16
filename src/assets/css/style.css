@@ -318,6 +318,50 @@
   height: 30px;
 }
 
+.mg-profile-photo{
+  border-radius: 16px;
+}
+
+.mg-name{
+  font-family: Montserrat;
+  font-size: 24px;
+  font-weight: 600;
+  color: #4E5150;
+  margin-top: 20px;
+}
+
+.mg-location{
+  font-family: Montserrat;
+  font-size: 14px;
+  font-weight: 600;
+  color: #A9A9A9;
+}
+
+.mg-stat{
+  margin-top: 20px;
+  border-radius: 12px;
+  background: #E5E5E5;
+  padding: 10px 30px 10px 30px
+}
+
+.mg-stat-title{
+  color: #4E5150;
+  font-family: Montserrat;
+  font-size: 18px;
+  text-align: center;
+  font-weight: 600;
+}
+
+
+.mg-stat-desc{
+  color: #BDBDBD;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-weight: 600;
+  text-align: center;
+}
+
+
 @media (max-width: 768px) {
   .left-panel{
     margin-top: 30px;
