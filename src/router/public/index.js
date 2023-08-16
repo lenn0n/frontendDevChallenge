@@ -8,6 +8,7 @@ import InteriorConsultant from "@pages/ResponsiveWebDev/ThirdStage/InteriorConsu
 import DeployApps from "@pages/HowTo/DeployApps";
 import ReactBoilerplate from "@pages/HowTo/ReactBoilerplate";
 import Recipe from "@pages/ResponsiveWebDev/FourthStage/Recipe";
+import Gallery from "@pages/ResponsiveWebDev/FifthStage/Gallery";
 
 export default [
   {
@@ -46,6 +47,13 @@ export default [
     element: 
     <DefaultWrapper text="Recipe Page">
       <Recipe/>
+    </DefaultWrapper>,
+  },
+  {
+    path: "/gallery",
+    element: 
+    <DefaultWrapper text="My Gallery">
+      <Gallery/>
     </DefaultWrapper>,
   },
   {
