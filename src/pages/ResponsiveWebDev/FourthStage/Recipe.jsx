@@ -99,7 +99,7 @@ const Recipe = () => {
                     <div className="rp-summary-item-value rp-summary-selected">12 servings</div>
                   </div>
                 </div>
-                <div className="d-flex align-items-center gap-2 4">
+                <div className="d-flex align-items-center gap-2 ">
                   <span class="material-icons">schedule</span>
                   <div>
                     <div className="rp-summary-item-title">PREP TIME</div>
