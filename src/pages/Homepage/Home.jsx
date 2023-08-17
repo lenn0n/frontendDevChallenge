@@ -23,8 +23,11 @@ const Home = () => {
         <div className="alert alert-success" role="button" onClick={()=>{ handleNavigate("/recipe")}}>
           devChallenges.io - Recipe Page
         </div>
-        <div className="alert alert-danger" role="button" onClick={()=>{ handleNavigate("/gallery")}}>
-          devChallenges.io - My Gallery (On-Going)
+        <div className="alert alert-success" role="button" onClick={()=>{ handleNavigate("/gallery")}}>
+          devChallenges.io - My Gallery
+        </div>
+        <div className="alert alert-danger" role="button" onClick={()=>{ handleNavigate("/checkout")}}>
+          devChallenges.io - Checkout (On-Going)
         </div>
     
         <div className="alert alert-primary text-center mt-5" role="button" onClick={()=>{ handleNavigate("/deploy-apps")}}>

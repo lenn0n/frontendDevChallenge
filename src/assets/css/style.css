@@ -361,6 +361,16 @@
   text-align: center;
 }
 
+.gp-img{
+  border-radius: 12px;
+  box-shadow: 0px 4px 6px 0px #00000026;
+  max-height: 300px;
+  height: 100%;
+  width: 100%;
+}
+.gp-img-extended{
+  max-height: 100%;
+}
 
 @media (max-width: 768px) {
   .left-panel{
@@ -402,6 +412,9 @@
   }
   .rp-header-desc{
     max-width: 100%;
+  }
+  .gp-img{
+    object-fit: cover;
   }
 }
 
