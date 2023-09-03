@@ -9,6 +9,7 @@ import DeployApps from "@pages/HowTo/DeployApps";
 import ReactBoilerplate from "@pages/HowTo/ReactBoilerplate";
 import Recipe from "@pages/ResponsiveWebDev/FourthStage/Recipe";
 import Gallery from "@pages/ResponsiveWebDev/FifthStage/Gallery";
+import Checkout from "@pages/ResponsiveWebDev/SixthStage/Checkout";
 
 export default [
   {
@@ -54,6 +55,13 @@ export default [
     element: 
     <DefaultWrapper text="My Gallery">
       <Gallery/>
+    </DefaultWrapper>,
+  },
+  {
+    path: "/checkout",
+    element: 
+    <DefaultWrapper text="Checkout Page">
+      <Checkout/>
     </DefaultWrapper>,
   },
   {

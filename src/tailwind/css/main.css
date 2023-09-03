@@ -1,0 +1,95 @@
+@config "../js/main.js";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.checkout-header {
+	font-family: Montserrat;
+	font-weight: 600;
+	font-size: 36px;
+	color: #4e5150;
+
+	margin-bottom: 2%;
+}
+
+.checkout-title {
+	font-size: 18px;
+	font-family: Montserrat;
+	font-weight: 600;
+}
+
+.checkout-label {
+	font-size: 12px;
+	font-family: Montserrat;
+	font-weight: 600;
+}
+
+.checkout-form {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	position: relative;
+}
+
+.checkout-input {
+	margin-top: 5px;
+	margin-bottom: 5px;
+	font-family: Montserrat;
+	font-weight: 600;
+	font-size: 16px;
+	padding: 10px;
+	border: 1px solid #828282;
+	padding-left: 45px !important;
+}
+
+.checkout-select {
+	margin-top: 5px;
+	margin-bottom: 5px;
+	font-family: Montserrat;
+	font-weight: 600;
+	font-size: 16px;
+	padding: 10px;
+	padding-bottom: 12px;
+	border: 1px solid #828282;
+	padding-left: 45px !important;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+}
+
+.input-field-icon {
+	position: absolute;
+	margin-top: 16px;
+	margin-left: 10px;
+	width: 24px;
+	height: 24px;
+	color: #828282;
+}
+
+.input-field-bgicon {
+	position: absolute;
+	margin-top: 16px;
+	margin-left: 10px;
+	margin-right: 5px;
+	width: 24px;
+	height: 24px;
+	right: 5px;
+	color: #828282;
+	background-color: #e0e0e0;
+}
+
+.checkout-input .is-invalid {
+	border: 1px solid color-red;
+}
+
+.invalid-input {
+	border: 2px solid red;
+	color: red;
+}
+
+.invalid-input:focus {
+	color: black;
+}
+
+.focus-icon {
+	color: red !important;
+}
