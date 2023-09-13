@@ -1,5 +1,6 @@
 import React from "react";
-
+import Item1 from "@assets/images/cp-p1.png";
+import Item2 from "@assets/images/cp-p2.png";
 const Checkout = () => {
 	const InputForm = ({
 		title = "",
@@ -59,14 +60,13 @@ const Checkout = () => {
 		);
 	};
 	return (
-		<div className="container">
+		<div className="container-sm">
 			<div className="flex flex-wrap justify-between">
 				<div className="checkout-header">Checkout</div>
 				<div></div>
 			</div>
-
-			<div className="flex flex-wrap justify-between">
-				<div className="md:col-12 lg:col-6">
+			<div className="grid md:grid-cols-2 gap-4">
+				<div className="md:w-3/4">
 					<div className="checkout-title">Contact information</div>
 					<InputForm
 						title="Email"
@@ -108,8 +108,34 @@ const Checkout = () => {
 							placeholder="Your postal code.."
 						/>
 					</div>
+					<div className="flex gap-2">
+						<input type="checkbox" name="save" />
+						<label for="save" className="fw-bold checkout-label ">
+							Save this information for next time
+						</label>
+					</div>
+					<div className="grid place-items-end">
+						<button className="checkout-button text-white mt-4">
+							Continue
+						</button>
+					</div>
 				</div>
-				<div className="md:col-12 lg:col-6">aaa</div>
+
+				<div className="basis-full">
+					<div className="checkout-panel-card rounded-3 p-4">
+						<div className="flex gap-2">
+							<img
+								className="rounded-3"
+								src={Item1}
+								height={134}
+								width={134}
+							/>
+							<div className="text-[16px] font-[600]">
+								Vintage Backbag
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 	);

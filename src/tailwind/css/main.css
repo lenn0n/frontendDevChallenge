@@ -56,6 +56,17 @@
 	-moz-appearance: none;
 }
 
+.checkout-button {
+	width: 166px;
+	height: 54px;
+	border-radius: 12px;
+	background: #f2994a;
+}
+
+.checkout-panel-card {
+	background: #f2f2f2;
+}
+
 .input-field-icon {
 	position: absolute;
 	margin-top: 16px;
