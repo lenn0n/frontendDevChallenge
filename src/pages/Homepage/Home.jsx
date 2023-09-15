@@ -29,7 +29,11 @@ const Home = () => {
 	};
 	return (
 		<>
-			<div className="container mx-auto grid">
+			<div className="container mx-auto grid place-items-center">
+				<div className="text-red-500 text-[40px]">
+					Currently transferring CSS style to TailwindCSS. Some layout
+					may appear ugly.
+				</div>
 				<div className="grid grid-cols-4 place-items-center place-content-center gap-4 mx-auto">
 					<Component
 						title="404 Not Found"
