@@ -8,18 +8,18 @@ const Checkout = () => {
 		placeholder = "...",
 	}) => {
 		return (
-			<div className="checkout-form w-full group">
+			<div className="checkout-form w-full">
 				<div className="checkout-label">{title}</div>
 				<div className="flex flex-column">
 					<input
 						type="text"
-						className="checkout-input rounded-lg w-full focus:border-gray-500 outline-none border-2 focus:bg-gray-100 peer/input"
+						className="checkout-input block rounded-lg w-full focus:border-gray-500 outline-none border-2 focus:bg-gray-100 peer/input"
 						placeholder={placeholder}
 						autoComplete="off"
 					/>
-					<span className="material-icons input-field-icon peer-focus/input:rotate-45 transition ">
+					<div className="material-icon input-field-icon peer-focus/input:rotate-45 transition ">
 						{icon}
-					</span>
+					</div>
 					<div className="text-custom-primary font-medium hidden peer-focus/input:block peer-focus/input:transition before:content-['*'] before:text-red-500 before:mr-1">
 						Enter valid {title}
 					</div>
@@ -60,13 +60,12 @@ const Checkout = () => {
 		);
 	};
 	return (
-		<div className="container-sm">
-			<div className="flex flex-wrap justify-between">
-				<div className="checkout-header">Checkout</div>
-				<div></div>
+		<div className="grid place-content-center">
+			<div className="place-items-start checkout-header">
+				Checkout
 			</div>
 			<div className="grid md:grid-cols-2 gap-4">
-				<div className="md:w-3/4">
+				<div className="">
 					<div className="checkout-title">Contact information</div>
 					<InputForm
 						title="Email"
@@ -121,8 +120,8 @@ const Checkout = () => {
 					</div>
 				</div>
 
-				<div className="basis-full">
-					<div className="checkout-panel-card rounded-3 p-4">
+				<div className="ms-4">
+					<div className="checkout-panel-card rounded-xl m-3 p-4">
 						<div className="flex gap-2">
 							<img
 								className="rounded-3"

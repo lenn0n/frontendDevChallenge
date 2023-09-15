@@ -1,18 +1,30 @@
-import React from "react"
+import React from "react";
 import { useNavigate } from "react-router-dom";
 
 const Footer = () => {
-  const navigate = useNavigate()
+	const navigate = useNavigate();
 	return (
 		<>
-      <div className="footer d-flex flex-wrap">
-      <div>created by </div>
-      <span className="fw-bold ms-2 me-2">lenn0n</span> 
-      <div>- devChallenges.io</div>
-      </div>
-      <div className="text-center mb-4 text-dark fw-bold" onClick={()=>{ navigate("/")}} role="button">BACK TO HOMEPAGE</div>
-    </>
-	)
-}
+			<div className="mt-4 grid place-items-center">
+				<div className="flex ">
+					<div>created by </div>
+					<span className="font-bold ms-2 me-2">lenn0n</span>
+					<div className="text-rose-500 font-bold">
+						- devChallenges.io
+					</div>
+				</div>
+				<div
+					className="mt-4 mb-4 text-dark font-bold hover:scale-105 hover:text-red-600"
+					onClick={() => {
+						navigate("/");
+					}}
+					role="button"
+				>
+					BACK TO HOMEPAGE
+				</div>
+			</div>
+		</>
+	);
+};
 
-export default Footer
+export default Footer;

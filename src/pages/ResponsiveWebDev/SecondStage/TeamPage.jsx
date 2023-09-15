@@ -43,7 +43,7 @@ const TeamPage = () => {
 	const Crew = ({ data }) => {
 		return (
 			<div className="col-lg-4 col-sm-6 crew-frame">
-				<div className="d-flex justify-content-center">
+				<div className="flex justify-center">
 					<div>
 						<img
 							src={data?.avatar}
@@ -60,7 +60,7 @@ const TeamPage = () => {
 
 	return (
 		<>
-			<div className="d-flex justify-content-center">
+			<div className="flex justify-center">
 				<div style={{ width: "1000px" }}>
 					<div className="row">
 						<div className="team-title col-lg-6 col-sm-12">
