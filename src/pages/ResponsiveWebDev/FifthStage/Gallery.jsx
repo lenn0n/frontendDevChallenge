@@ -11,8 +11,8 @@ import G6 from "@assets/images/g6.png";
 const Gallery = () => {
 	return (
 		<>
-			<div className="d-flex align-items-center justify-content-center">
-				<div className="d-flex flex-column align-items-center">
+			<div className="flex items-center justify-center">
+				<div className="flex flex-col items-center">
 					<img
 						src={ProfilePicture}
 						alt="pf"
@@ -22,7 +22,7 @@ const Gallery = () => {
 					/>
 					<div className="mg-name">Rodney Cotton</div>
 					<div className="mg-location">Helsinki, Finland</div>
-					<div className="d-flex gap-3 flex-wrap align-items-center justify-content-center">
+					<div className="flex gap-3 flex-wrap items-center justify-center">
 						<div className="mg-stat group">
 							<div className="mg-stat-title group-hover:text-white">
 								100
@@ -40,8 +40,8 @@ const Gallery = () => {
 							<div className="mg-stat-desc">Following</div>
 						</div>
 					</div>
-					<div className="mt-5 d-flex flex-column gap-4 ms-4 me-4">
-						<div className="d-flex flex-wrap">
+					<div className="mt-5 flex flex-col gap-4 ms-4 me-4">
+						<div className="flex flex-wrap">
 							<div className="col-4 pe-2">
 								<img
 									src={G1}
@@ -59,8 +59,8 @@ const Gallery = () => {
 								/>
 							</div>
 						</div>
-						<div className="d-flex">
-							<div className="d-flex gap-4 flex-column col-9 pe-2">
+						<div className="flex">
+							<div className="flex gap-4 flex-col col-9 pe-2">
 								<div>
 									<img
 										src={G3}
@@ -69,7 +69,7 @@ const Gallery = () => {
 										height="300px"
 									/>
 								</div>
-								<div className="d-flex flex-wrap">
+								<div className="flex flex-wrap">
 									<div className="col-6 pe-2">
 										<img
 											src={G6}
@@ -88,7 +88,7 @@ const Gallery = () => {
 									</div>
 								</div>
 							</div>
-							<div className="d-flex col-3 ps-3">
+							<div className="flex col-3 ps-3">
 								<img
 									src={G4}
 									alt="g4"

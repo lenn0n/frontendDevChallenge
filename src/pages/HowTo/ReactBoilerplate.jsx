@@ -127,21 +127,37 @@ const ReactBoilerPlate = () => {
 		return (
 			<div className="mt-4">
 				<p>{text}</p>
-				<div className="code-block">{code}</div>
+				<div className="code-block rounded-lg bg-slate-800">
+					{code}
+				</div>
 			</div>
 		);
 	};
 
 	return (
 		<>
-			<div className="d-flex justify-content-center m-4">
+			<div className="flex justify-center m-4">
 				<div>
-					<h1 className="text-info">React + Webpack5 Boilerplate</h1>
-					<p> Setting up, installing dependencies, checking version compatibility is one of the hardest part of being a developer. </p>
-					<p> It takes a lot of time to get started. In this blog, we are going to make it easier and faster". </p>
+					<h1 className="text-white bg-blue-800 p-2 rounded-lg mb-3  font-bold text-[29px]">
+						React + Webpack5 Boilerplate
+					</h1>
 					<p>
 						{" "}
-						Or you can just clone my repo: <a href="https://github.com/lenn0n/react-webpack-boileplate.git">https://github.com/lenn0n/react-webpack-boileplate.git</a>
+						Setting up, installing dependencies, checking version
+						compatibility is one of the hardest part of being a
+						developer.{" "}
+					</p>
+					<p>
+						{" "}
+						It takes a lot of time to get started. In this blog, we
+						are going to make it easier and faster".{" "}
+					</p>
+					<p>
+						{" "}
+						Or you can just clone my repo:{" "}
+						<a href="https://github.com/lenn0n/react-webpack-boileplate.git">
+							https://github.com/lenn0n/react-webpack-boileplate.git
+						</a>
 					</p>
 					{CreatingAppSteps.map((data) => {
 						return <Step text={data.text} code={data.code} />;

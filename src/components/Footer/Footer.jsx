@@ -5,7 +5,7 @@ const Footer = () => {
 	const navigate = useNavigate();
 	return (
 		<>
-			<div className="mt-4 grid place-items-center">
+			<div className="py-[5%] flex items-center justify-center flex-wrap flex-col">
 				<div className="flex ">
 					<div>created by </div>
 					<span className="font-bold ms-2 me-2">lenn0n</span>

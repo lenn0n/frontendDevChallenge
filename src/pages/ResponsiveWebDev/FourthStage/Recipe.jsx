@@ -4,13 +4,13 @@ import CheeseCake from "@assets/images/cheesecake.png";
 const Recipe = () => {
 	return (
 		<>
-			<div className="container d-flex justify-content-center rp-container">
+			<div className="container flex mx-auto justify-center rp-container">
 				<div>
 					<div>
 						<div className="rp-header-title">
 							Classic Cheesecake Recipe
 						</div>
-						<div className="rp-header-desc d-flex gap-1">
+						<div className="rp-header-desc flex gap-1">
 							<span className="rp-header-desc-prefix">:::</span>
 							Look no further for a creamy and ultra smooth classic
 							cheesecake recipe! Paired with a buttery graham cracker
@@ -25,7 +25,7 @@ const Recipe = () => {
 							className="rp-header-cover"
 						/>
 					</div>
-					<div className="d-flex justify-content-between items-container">
+					<div className="flex justify-between items-container">
 						<div className="ing-items">
 							<div className="rp-ingredient-title">Ingredients</div>
 							<div className="rp-ingredient-item">
@@ -188,7 +188,7 @@ const Recipe = () => {
 							</div>
 						</div>
 						<div className="rp-summary">
-							<div className="d-flex align-items-center gap-2 ">
+							<div className="flex items-center gap-2 ">
 								<span class="material-icons rp-summary-selected">
 									restaurant_menu
 								</span>
@@ -199,7 +199,7 @@ const Recipe = () => {
 									</div>
 								</div>
 							</div>
-							<div className="d-flex align-items-center gap-2 ">
+							<div className="flex items-center gap-2 ">
 								<span class="material-icons">schedule</span>
 								<div>
 									<div className="rp-summary-item-title">
@@ -210,7 +210,7 @@ const Recipe = () => {
 									</div>
 								</div>
 							</div>
-							<div className="d-flex align-items-center gap-2 ">
+							<div className="flex items-center gap-2 ">
 								<span class="material-icons">schedule</span>
 								<div>
 									<div className="rp-summary-item-title">
@@ -219,7 +219,7 @@ const Recipe = () => {
 									<div className="rp-summary-item-value">1 hour</div>
 								</div>
 							</div>
-							<div className="d-flex align-items-center gap-2 ">
+							<div className="flex items-center gap-2 ">
 								<span class="material-icons">schedule</span>
 								<div>
 									<div className="rp-summary-item-title">
@@ -234,14 +234,14 @@ const Recipe = () => {
 					</div>
 					<div className="rp-ingredient-title mt-4">Instructions</div>
 
-					<div className="d-flex">
+					<div className="flex">
 						<div className="rp-step-wrapper">1</div>
 						<div>
 							Adjust the oven rack to the lower-middle position and
 							preheat oven to 350°F (177°C).
 						</div>
 					</div>
-					<div className="d-flex mt-3">
+					<div className="flex mt-3">
 						<div className="rp-step-wrapper">2</div>
 						<div>
 							<b>Make the crust:</b> Using a food processor, pulse the
@@ -258,7 +258,7 @@ const Recipe = () => {
 							Allow crust to slightly cool as you prepare the filling.
 						</div>
 					</div>
-					<div className="d-flex mt-3">
+					<div className="flex mt-3">
 						<div className="rp-step-wrapper">3</div>
 						<div>
 							<b>Make the filling:</b> Using a handheld or stand mixer
@@ -274,7 +274,7 @@ const Recipe = () => {
 							cools, avoid over-mixing the batter as best you can..
 						</div>
 					</div>
-					<div className="d-flex mt-3">
+					<div className="flex mt-3">
 						<div className="rp-step-wrapper">4</div>
 						<div>
 							<b>Prepare the simple water bath (see note)</b> Boil a
@@ -291,7 +291,7 @@ const Recipe = () => {
 							easier for you.)
 						</div>
 					</div>
-					<div className="d-flex mt-3">
+					<div className="flex mt-3">
 						<div className="rp-step-wrapper">5</div>
 						<div>
 							Bake cheesecake for 55-70 minutes or until the center is
@@ -305,7 +305,7 @@ const Recipe = () => {
 							overnight.
 						</div>
 					</div>
-					<div className="d-flex mt-3">
+					<div className="flex mt-3">
 						<div className="rp-step-wrapper">6</div>
 						<div>
 							Use a knife to loosen the chilled cheesecake from the
@@ -315,7 +315,7 @@ const Recipe = () => {
 							between each slice.
 						</div>
 					</div>
-					<div className="d-flex mt-3">
+					<div className="flex mt-3">
 						<div className="rp-step-wrapper">7</div>
 						<div>
 							Serve cheesecake with desired toppings. Cover and store

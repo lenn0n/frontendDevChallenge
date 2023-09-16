@@ -21,7 +21,7 @@ const InteriorConsultant = () => {
 					</span>
 				</div>
 
-				<div className="d-flex flex-column gap-4 h-100 justify-content-center align-items-center text-white">
+				<div className="flex flex-col gap-4 h-100 justify-center items-center text-white">
 					<div
 						className="ic-header-item ic-header-menu-selected"
 						role="button"
@@ -40,7 +40,7 @@ const InteriorConsultant = () => {
 				</div>
 			</div>
 			<div className="interior-consultant-container">
-				<div className="d-flex justify-content-between align-items-center">
+				<div className="flex justify-between items-center">
 					<div>
 						<div className="ic-header-logo">THIS INTERIOR</div>
 					</div>
@@ -72,8 +72,8 @@ const InteriorConsultant = () => {
 					</div>
 				</div>
 
-				<div className="mt-5 row align-items-center justify-content-center">
-					<div className="col-lg-6 col-sm-12">
+				<div className="mt-5 flex flex-wrap items-center justify-center">
+					<div className="basis-full md:basis-1/2">
 						<div className="col-9">
 							<div className="ic-body-title">Modern interior</div>
 							<div className="ic-body-desc">
@@ -82,7 +82,7 @@ const InteriorConsultant = () => {
 								organizing & eco-services.
 							</div>
 							<div
-								className="mt-5 fw-bold ic-header-text mb-4 d-flex gap-2"
+								className="mt-5 fw-bold ic-header-text mb-4 flex gap-2"
 								role="button"
 							>
 								Read more{" "}
@@ -93,11 +93,11 @@ const InteriorConsultant = () => {
 						</div>
 					</div>
 
-					<div className="col-lg-6  col-sm-12 ">
+					<div className="basis-full md:basis-1/2">
 						<img src={ICCover} alt="Loading" className="ic-cover" />
-						<div className="d-flex justify-content-end">
+						<div className="flex justify-end">
 							<div className="ic-author-container">
-								<div className="d-flex align-items-center m-4">
+								<div className="flex items-center m-4">
 									<img
 										src={ICAvatar}
 										className="ic-avatar"
@@ -106,9 +106,7 @@ const InteriorConsultant = () => {
 										width={50}
 									/>
 									<div className="ms-3">
-										<div className="ic-author">
-											Aliza Webber
-										</div>
+										<div className="ic-author">Aliza Webber</div>
 										<div className="ic-position  hover:text-white">
 											Interior designer
 										</div>
