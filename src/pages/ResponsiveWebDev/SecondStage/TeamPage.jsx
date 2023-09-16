@@ -42,7 +42,7 @@ const TeamPage = () => {
 
 	const Crew = ({ data }) => {
 		return (
-			<div className="flex justify-even sm:basis-1/2 md:basis-1/3 crew-frame">
+			<div className="crew-frame">
 				<div className="flex justify-center">
 					<div>
 						<img
@@ -62,7 +62,7 @@ const TeamPage = () => {
 		<>
 			<div className="container mx-auto flex flex-wrap items-center justify-center">
 				<div style={{ width: "1000px" }}>
-					<div className="flex flex-wrap items-center justify-center">
+					<div className="flex flex-wrap items-center justify-center mb-5">
 						<div className="flex flex-wrap">
 							<div className="basis-full m-4 md:basis-1/2 md:m-0 team-title">
 								<div className="">The creative crew</div>
@@ -77,7 +77,7 @@ const TeamPage = () => {
 							</div>
 						</div>
 					</div>
-					<div className="flex flex-wrap items-center justify-center">
+					<div className="grid sm:grid-cols-2 md:grid-cols-3">
 						{CrewList.map((data) => (
 							<Crew data={data} />
 						))}
