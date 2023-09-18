@@ -68,7 +68,7 @@ const Home = () => {
 	};
 	return (
 		<>
-			<div className="container mx-auto flex justify-center items-center flex-col gap-5 ">
+			<div className="container mx-auto flex justify-center items-center flex-col gap-5 md:h-[100vh!important] h-[100%!important] ">
 				<div
 					className="font-bold text-rose-500 text-[20px] first-letter:text-[40px] md:text-[50px] md:first-letter:text-[80px] hover:text-blue-500"
 					role="button"
