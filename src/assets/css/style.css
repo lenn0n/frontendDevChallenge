@@ -120,9 +120,13 @@
 	font-size: 14px;
 	padding: 4px;
 	font-weight: 200;
+	font-family: Crimson;
 	border: 1px solid white;
 }
 
+.form-check-input {
+	margin-right: 5px;
+}
 .ic-header-menu {
 	display: flex;
 }
@@ -336,7 +340,6 @@
 }
 
 .mg-stat {
-	margin-top: 20px;
 	border-radius: 12px;
 	background: #e5e5e5;
 	padding: 10px 30px 10px 30px;

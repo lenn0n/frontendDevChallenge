@@ -4,8 +4,8 @@ import CheeseCake from "@assets/images/cheesecake.png";
 const Recipe = () => {
 	return (
 		<>
-			<div className="container flex mx-auto justify-center rp-container">
-				<div>
+			<div className="container flex mx-auto justify-center rp-container p-5">
+				<div style={{ width: "1000px" }}>
 					<div>
 						<div className="rp-header-title">
 							Classic Cheesecake Recipe

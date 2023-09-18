@@ -8,7 +8,11 @@ const InteriorConsultant = () => {
 	const [openNav, setOpenNav] = useState(false);
 	return (
 		<>
-			<div className={`offcanvas2 ${openNav ? "--show" : ""}`}>
+			<div
+				className={`offcanvas2 ${
+					openNav ? "--show block " : "hidden"
+				}`}
+			>
 				<div className="close-nav mt-4">
 					<span
 						className="material-icons text-white"
@@ -21,7 +25,7 @@ const InteriorConsultant = () => {
 					</span>
 				</div>
 
-				<div className="flex flex-col gap-4 h-100 justify-center items-center text-white">
+				<div className="container mx-auto flex justify-center flex-col items-center text-white">
 					<div
 						className="ic-header-item ic-header-menu-selected"
 						role="button"
@@ -40,7 +44,7 @@ const InteriorConsultant = () => {
 				</div>
 			</div>
 			<div className="bg-[#181719] text-white">
-				<div className="container mx-auto flex flex-wrap justify-center items-center">
+				<div className="container mx-auto flex flex-wrap md:justify-center md:items-center p-5">
 					<div>
 						<div className="flex justify-between items-center mb-5">
 							<div>
@@ -75,7 +79,7 @@ const InteriorConsultant = () => {
 						</div>
 
 						<div className="mt-5 flex flex-wrap items-center justify-center">
-							<div className="basis-full md:basis-1/2">
+							<div className="basis-full lg:basis-1/2">
 								<div className="col-9">
 									<div className="ic-body-title">Modern interior</div>
 									<div className="ic-body-desc">
@@ -95,7 +99,7 @@ const InteriorConsultant = () => {
 								</div>
 							</div>
 
-							<div className="basis-full md:basis-1/2">
+							<div className="basis-full lg:basis-1/2">
 								<img
 									src={ICCover}
 									alt="Loading"

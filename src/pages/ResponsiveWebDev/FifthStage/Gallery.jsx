@@ -11,9 +11,58 @@ import G6 from "@assets/images/g6.png";
 const Gallery = () => {
 	return (
 		<>
+			<div className="container mx-auto flex flex-wrap justify-center">
+				<div className="flex items-center flex-col flex-wrap">
+					<img
+						src={ProfilePicture}
+						alt="pf"
+						height="156px"
+						width="156px"
+						className="mg-profile-photo"
+					/>
+					<div className="mg-name">Rodney Cotton</div>
+					<div className="mg-location mb-4">Helsinki, Finland</div>
+					<div className="grid lg:grid-cols-3 gap-2">
+						<div className="mg-stat group ">
+							<div className="mg-stat-title group-hover:text-white">
+								100
+							</div>
+							<div className="mg-stat-desc group-hover:text-white">
+								Posts
+							</div>
+						</div>
+						<div className="mg-stat">
+							<div className="mg-stat-title">2,242</div>
+							<div className="mg-stat-desc">Follower</div>
+						</div>
+						<div className="mg-stat">
+							<div className="mg-stat-title">1,432</div>
+							<div className="mg-stat-desc">Following</div>
+						</div>
+					</div>
+					<div className="grid">
+						<div className="col-4 pe-2">
+							<img
+								src={G1}
+								alt="g1"
+								className="gp-img hover:scale-105 transition"
+								height="300px"
+							/>
+						</div>
+						<div className="col-8 ps-3">
+							<img
+								src={G2}
+								alt="g2"
+								className="gp-img hover:scale-105 transition"
+								height="300px"
+							/>
+						</div>
+					</div>
+				</div>
+			</div>
 			<div className="flex items-center justify-center">
 				<div className="flex flex-col items-center">
-					<img
+					{/* <img
 						src={ProfilePicture}
 						alt="pf"
 						height="156px"
@@ -39,8 +88,8 @@ const Gallery = () => {
 							<div className="mg-stat-title">1,432</div>
 							<div className="mg-stat-desc">Following</div>
 						</div>
-					</div>
-					<div className="mt-5 flex flex-col gap-4 ms-4 me-4">
+					</div> */}
+					{/* <div className="mt-5 flex flex-col gap-4 ms-4 me-4">
 						<div className="flex flex-wrap">
 							<div className="col-4 pe-2">
 								<img
@@ -96,7 +145,7 @@ const Gallery = () => {
 								/>
 							</div>
 						</div>
-					</div>
+					</div> */}
 				</div>
 			</div>
 		</>
