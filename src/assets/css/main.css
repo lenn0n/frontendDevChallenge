@@ -574,6 +574,14 @@ video {
   position: static;
 }
 
+.order-1{
+  order: 1;
+}
+
+.order-2{
+  order: 2;
+}
+
 .col-span-2{
   grid-column: span 2 / span 2;
 }
@@ -1311,6 +1319,14 @@ video {
 }
 
 @media (min-width: 768px){
+  .md\:order-1{
+    order: 1;
+  }
+
+  .md\:order-2{
+    order: 2;
+  }
+
   .md\:m-0{
     margin: 0px;
   }
