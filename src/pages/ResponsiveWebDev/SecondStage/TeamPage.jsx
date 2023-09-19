@@ -83,9 +83,9 @@ const TeamPage = () => {
 							<Crew data={data} />
 						))}
 					</div>
+					<Footer />
 				</div>
 			</div>
-			<Footer />
 		</>
 	);
 };

@@ -23,7 +23,7 @@ const NotFound = () => {
 						The page you are looking for might be removed or is
 						temporarily unavailable
 					</div>
-					<div className="grid place-content-center md:place-content-start">
+					<div className="grid place-content-center md:place-content-start mb-4">
 						<button
 							onClick={handleBackToHome}
 							className="px-[43px] py-[24px] uppercase font-bold text-white bg-gray-900 mt-4 mb-4 hover:bg-slate-900 hover:rounded-lg"
