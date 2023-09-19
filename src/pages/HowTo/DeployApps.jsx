@@ -1,5 +1,5 @@
 import React from "react";
-
+import Footer from "@components/Footer/Footer";
 const DeployApps = () => {
 	const FirebaseSteps = [
 		{
@@ -186,6 +186,7 @@ const DeployApps = () => {
 					})}
 				</div>
 			</div>
+			<Footer />
 		</>
 	);
 };

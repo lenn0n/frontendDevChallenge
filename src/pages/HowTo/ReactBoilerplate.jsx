@@ -1,5 +1,5 @@
 import React from "react";
-
+import Footer from "@components/Footer/Footer";
 const ReactBoilerPlate = () => {
 	const CreatingAppSteps = [
 		{
@@ -164,6 +164,7 @@ const ReactBoilerPlate = () => {
 					})}
 				</div>
 			</div>
+			<Footer />
 		</>
 	);
 };
