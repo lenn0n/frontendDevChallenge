@@ -1,6 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-
+import Footer from "@components/Footer/Footer";
 import Scarecrow from "@assets/images/Scarecrow.png";
 const NotFound = () => {
 	const navigate = useNavigate();
@@ -33,6 +33,7 @@ const NotFound = () => {
 					</div>
 				</div>
 			</div>
+			<Footer />
 		</>
 	);
 };

@@ -80,11 +80,6 @@ const Home = () => {
 						return <Component {...data} index={index + 1} />;
 					})}
 				</div>
-
-				<div className="mt-5 font-bold text-purple-600">
-					Currently transferring styles to TailwindCSS. Some layout
-					may appear ugly.
-				</div>
 			</div>
 		</>
 	);

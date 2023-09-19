@@ -1,4 +1,5 @@
 import React from "react";
+import Footer from "@components/Footer/Footer";
 import Photo1 from "@assets/images/photo1.png";
 import Photo2 from "@assets/images/photo2.png";
 import Photo3 from "@assets/images/photo3.png";
@@ -84,6 +85,7 @@ const TeamPage = () => {
 					</div>
 				</div>
 			</div>
+			<Footer />
 		</>
 	);
 };

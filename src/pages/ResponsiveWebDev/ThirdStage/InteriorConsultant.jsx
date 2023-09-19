@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 
+import Footer from "@components/Footer/Footer";
 import ICCover from "@assets/images/ic-cover.png";
 import ICAvatar from "@assets/images/ic-avatar.png";
 import Burger from "@assets/images/burger.png";
@@ -135,6 +136,7 @@ const InteriorConsultant = () => {
 					</div>
 				</div>
 			</div>
+			<Footer />
 		</>
 	);
 };

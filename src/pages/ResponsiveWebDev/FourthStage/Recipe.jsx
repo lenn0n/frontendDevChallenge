@@ -1,4 +1,5 @@
 import React from "react";
+import Footer from "@components/Footer/Footer";
 import CheeseCake from "@assets/images/cheesecake.png";
 
 const Recipe = () => {
@@ -325,6 +326,7 @@ const Recipe = () => {
 					</div>
 				</div>
 			</div>
+			<Footer />
 		</>
 	);
 };
