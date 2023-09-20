@@ -112,8 +112,15 @@ const Checkout = () => {
 								/>
 							</div>
 							<div className="flex gap-2">
-								<input type="checkbox" name="save" />
-								<label for="save" className="fw-bold checkout-label ">
+								<input
+									type="checkbox"
+									id="save"
+									className="w-5 h-5 bg-gray-900 accent-checkout-primary border-gray-900 rounded focus:ring-orange-500 focus:ring-2 "
+								/>
+								<label
+									for="save"
+									className="checkout-label text-[#4F4F4F]"
+								>
 									Save this information for next time
 								</label>
 							</div>
@@ -124,7 +131,7 @@ const Checkout = () => {
 							</div>
 						</div>
 					</div>
-					<div className="order-1 md:order-2 ">
+					<div className="order-1 md:order-2 lg:w-2/4">
 						<div>
 							<div className="checkout-panel-card rounded-xl m-3 p-4">
 								<div className="flex gap-2">
