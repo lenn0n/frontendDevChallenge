@@ -28,6 +28,51 @@ const Checkout = () => {
 		);
 	};
 
+	const OrderItem = () => {
+		return (
+			<div className="flex gap-2 flex-row gap-5 mt-4">
+				<img
+					className="rounded-lg"
+					src={Item1}
+					height={134}
+					width={134}
+				/>
+				<div className="flex flex-col justify-between">
+					<div>
+						<div className="text-[16px] font-[600] text-[#4E5150]">
+							Vintage Backbag
+						</div>
+						<div className="flex gap-2 flex-row flex-wrap">
+							<div className="text-checkout-primary font-semibold size-[16px]">
+								$54.99
+							</div>
+							<div className="line-through font-semibold size-[16px] text-[#4E5150]">
+								$54.99
+							</div>
+						</div>
+					</div>
+					<div className=" flex flex-wrap flex-row border rounded-lg p-4 gap-2 border-[#858585]">
+						<div className="flex justify-between">
+							<div className="bg-secondary rounded-md ps-2 pe-2 font-bold text-[#828282]">
+								-
+							</div>
+						</div>
+						1
+						<div className="flex justify-between">
+							<div className="bg-secondary rounded-md ps-1 pe-1">
+								<div className="flex justify-between">
+									<div className="bg-secondary rounded-md ps-1 pe-1 font-bold text-[#828282]">
+										+
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		);
+	};
+
 	const SelectForm = ({
 		title = "",
 		icon = "help",
@@ -61,7 +106,7 @@ const Checkout = () => {
 	};
 	return (
 		<>
-			<div className="container mx-auto flex flex-col">
+			<div className="container mx-auto flex flex-col w-[1000px]">
 				<div className="place-items-start checkout-header ms-4 me-4">
 					Checkout
 				</div>
@@ -131,20 +176,10 @@ const Checkout = () => {
 							</div>
 						</div>
 					</div>
-					<div className="order-1 md:order-2 lg:w-2/4">
+					<div className="order-1 md:order-2 lg:w-3/4">
 						<div>
 							<div className="checkout-panel-card rounded-xl m-3 p-4">
-								<div className="flex gap-2">
-									<img
-										className="rounded-3"
-										src={Item1}
-										height={134}
-										width={134}
-									/>
-									<div className="text-[16px] font-[600]">
-										Vintage Backbag
-									</div>
-								</div>
+								<OrderItem />
 							</div>
 						</div>
 					</div>
