@@ -10,6 +10,7 @@ import ReactBoilerplate from "@pages/HowTo/ReactBoilerplate";
 import Recipe from "@pages/ResponsiveWebDev/FourthStage/Recipe";
 import Gallery from "@pages/ResponsiveWebDev/FifthStage/Gallery";
 import Checkout from "@pages/ResponsiveWebDev/SixthStage/Checkout";
+import EdieHomepage from "@pages/ResponsiveWebDev/SeventhStage/EdieHomepage";
 
 export default [
 	{
@@ -65,6 +66,14 @@ export default [
 		element: (
 			<DefaultWrapper text="Checkout Page">
 				<Checkout />
+			</DefaultWrapper>
+		),
+	},
+	{
+		path: "/edie-homepage",
+		element: (
+			<DefaultWrapper text="Checkout Page">
+				<EdieHomepage />
 			</DefaultWrapper>
 		),
 	},

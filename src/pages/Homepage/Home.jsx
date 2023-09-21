@@ -24,8 +24,18 @@ const Home = () => {
 		{ title: "Recipe Page", url: "/recipe", color: "bg-green-800" },
 		{ title: "My Gallery", url: "/gallery", color: "bg-green-800" },
 		{
-			title: "Checkout (On-Going)",
+			title: "Checkout Page",
 			url: "/checkout",
+			color: "bg-green-800",
+		},
+		{
+			title: "Edie Homepage (On-Going)",
+			url: "/edie-homepage",
+			color: "bg-purple-800",
+		},
+		{
+			title: "Portfolio (Pending)",
+			url: "/portfolio",
 			color: "bg-red-800",
 		},
 		{
