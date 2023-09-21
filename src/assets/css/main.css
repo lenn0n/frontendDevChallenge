@@ -1491,6 +1491,10 @@ video {
     height: 100vh !important;
   }
 
+  .md\:w-\[1000px\]{
+    width: 1000px;
+  }
+
   .md\:basis-1\/2{
     flex-basis: 50%;
   }

@@ -104,7 +104,7 @@ const Checkout = () => {
 	};
 	return (
 		<>
-			<div className="container mx-auto flex flex-col w-[1000px]">
+			<div className="container mx-auto flex flex-col w-100 md:w-[1000px]">
 				<div className="place-items-start checkout-header ms-4 me-4">
 					Checkout
 				</div>
