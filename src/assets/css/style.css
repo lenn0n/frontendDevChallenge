@@ -193,7 +193,6 @@
 	width: 100%;
 	z-index: 2;
 	background-color: #181719;
-	margin-left: 100%;
 	transition: all 0.3s ease-in-out;
 }
 
@@ -204,9 +203,6 @@
 	padding-right: 10px;
 }
 
-.offcanvas2.--show {
-	margin-left: 0%;
-}
 
 .rp-container {
 	height: 100% !important;

@@ -10,8 +10,8 @@ const InteriorConsultant = () => {
 	return (
 		<>
 			<div
-				className={`offcanvas2 ${
-					openNav ? "--show block " : "hidden"
+				className={`offcanvas2 transition-opacity duration-300 ease-in block ${
+					openNav ? "opacity-100" : "opacity-0"
 				}`}
 			>
 				<div className="close-nav mt-4">
