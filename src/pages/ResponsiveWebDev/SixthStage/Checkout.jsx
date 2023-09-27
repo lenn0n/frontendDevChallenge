@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useCallback } from "react";
 import Item1 from "@assets/images/cp-p1.png";
 import Item2 from "@assets/images/cp-p2.png";
 import Footer from "@components/Footer/Footer";
@@ -65,7 +65,7 @@ const Checkout = () => {
 		return hasError
 	}
 
-	const InputForm = ({
+	const InputForm = useCallback(({
 		id = "",
 		title = "",
 		icon = "help",
@@ -99,9 +99,9 @@ const Checkout = () => {
 				</div>
 			</div>
 		);
-	};
+	},[]);
 
-	const OrderItem = ({ imgUrl, title, price, discount, itemCode }) => {
+	const OrderItem = useCallback(({ imgUrl, title, price, discount, itemCode }) => {
 		return (
 			<div className="flex gap-2 flex-col sm:flex-row gap-5 m-4">
 				<img
@@ -131,7 +131,7 @@ const Checkout = () => {
 									<line y1="1" x2="16" y2="1" stroke="#828282" stroke-width="2" class="icon" />
 								</svg>
 							</span>
-							<input className="border-none w-7 text-center bg-[#f2f2f2]" value={getQuantity(itemCode)}/>
+							<input name={itemCode} className="border-none w-7 text-center bg-[#f2f2f2]" onChange={changeQuantity} value={getQuantity(itemCode)}/>
 							<span className="bg-secondary w-[24px] h-[24px] rounded-md flex justify-center items-center hover:scale-110" role="button"
 								onClick={()=>{ incrementQty(itemCode)}}>
 								<svg width="13" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon">
@@ -143,9 +143,9 @@ const Checkout = () => {
 				</div>
 			</div>
 		);
-	};
+	}, []);
 
-	const SelectForm = ({
+	const SelectForm = useCallback(({
 		title = "",
 		icon = "help",
 		placeholder = "...",
@@ -184,7 +184,7 @@ const Checkout = () => {
 				</div>
 			</div>
 		);
-	};
+	}, []);
 
 
 	const getQuantity = (itemCode) => {
@@ -236,6 +236,23 @@ const Checkout = () => {
 				}
 			})
 		}
+
+		setQuantity(newQuantities)
+	}
+
+	const changeQuantity = (e) => {
+		let newQuantities = [], code = e.target.name, value = e.target.value;
+
+		quantity.map((data) => {
+			if (data.itemCode == code){
+				newQuantities.push({
+					...data,
+					quantity: value
+				})
+			} else {
+				newQuantities.push(data)
+			}
+		})
 
 		setQuantity(newQuantities)
 	}
