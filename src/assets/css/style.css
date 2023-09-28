@@ -462,6 +462,14 @@
 	}
 }
 
+.font-poppins{
+	font-family: Poppins;
+}
+
+.font-heebo{
+	font-family: Heebo;
+}
+
 @media (max-width: 550px) {
 	.interior-consultant-container {
 		padding: 14px;
