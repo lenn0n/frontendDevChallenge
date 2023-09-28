@@ -13,6 +13,9 @@ module.exports = {
 				info: "#40dec3",
 				"checkout-primary": "#f2994a",
 			},
+			boxShadow: {
+        'lenon': '0px 0px 40px 15px rgba(0, 0, 0, 0.3)',
+      }
 		},
 	},
 	plugins: [],

@@ -62,7 +62,7 @@ const TeamPage = () => {
 	return (
 		<>
 			<div className="container mx-auto flex flex-wrap items-center justify-center">
-				<div style={{ width: "1000px" }}>
+				<div>
 					<div className="flex flex-wrap items-center justify-center mb-5">
 						<div className="flex flex-wrap">
 							<div className="basis-full m-4 md:basis-1/2 md:m-0 team-title">

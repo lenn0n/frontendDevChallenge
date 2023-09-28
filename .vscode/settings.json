@@ -1,5 +1,10 @@
 {
 	"prettier.bracketSameLine": false,
 	"prettier.printWidth": 70,
-	"prettier.proseWrap": "preserve"
+	"prettier.proseWrap": "preserve",
+	"editor.formatOnSave": true,
+	"editor.defaultFormatter": "esbenp.prettier-vscode",
+	"[javascriptreact]": {
+		"editor.defaultFormatter": "vscode.typescript-language-features"
+	}
 }
