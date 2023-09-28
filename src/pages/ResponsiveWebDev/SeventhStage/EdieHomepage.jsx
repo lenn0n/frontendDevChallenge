@@ -46,7 +46,6 @@ const EdieHomepage = () => {
           </div>
         </div>
       </div>
-      
           
       <div>
         We offer high demand services
