@@ -1,11 +1,16 @@
 import React from "react"
 import Footer from "@components/Footer/Footer"
 import HeroImage from "@assets/images/edie/heroImage.jpg"
+import SmartHome from "@assets/images/edie/smarthome.jpg"
+import OnBoard from "@assets/images/edie/onboard.png"
+import Booking from "@assets/images/edie/booking.png"
+import JuiceProduct from "@assets/images/edie/juice-product.png"
+
 const EdieHomepage = () => {
 
   const ServiceCard = ({ icon, title, desc, selected = false }) => {
     return (
-      <div className="py-[46px] px-[34px] w-[341px] rounded-3xl hover:shadow-lenon hover:shadow-slate-500/10 hover:transition-all duration-700">
+      <div role="button" className="py-[46px] px-[34px] w-[341px] rounded-3xl hover:shadow-lenon hover:shadow-slate-500/10 hover:transition-all duration-700">
         <div className="">{icon}</div>
         <div className="font-poppins text-[24px] font-bold text-[#333333] mt-[35px]">{title || "No title"}</div>
         <div className="font-poppins text-[16px] font-normal text-[#4F4F4F] mt-[24px]">{desc || "No description"}</div>
@@ -16,8 +21,20 @@ const EdieHomepage = () => {
     )
   }
 
+  const BusinessCard = ({ img, title, subtitle }) => {
+    return (
+      <>
+        <div role="button" className="odd:mt-[176px]">
+          <img src={img} className="rounded-[24px]" />
+          <div className="font-poppins text-[14px] text-[#828282] mt-[31px]">{subtitle}</div>
+          <div className="font-poppins text-[24px] text-[#333333] font-medium">{title}</div>
+        </div>
+      </>
+    )
+  }
+
   return (<>
-    <div className="container mx-auto mb-[5000px]">
+    <div className="container mx-auto mb-[5000px]" style={{ width: '1100px' }} >
       <div className="grid md:grid-cols-2 place-items-between">
         <div className="font-extrabold text-[36px] font-heebo">Edie</div>
         <ul className="flex justify-between">
@@ -88,31 +105,15 @@ const EdieHomepage = () => {
         />
       </div>
 
-      <div className="">
+      <div className="font-poppins font-medium text-[36px] mt-[194px]">
         Good design means good business
       </div>
 
-      <div className="">
-        <div className="">
-          <div className="">IMG</div>
-          <div className="">Full stack application</div>
-          <div className="">Smart home dashboard</div>
-        </div>
-        <div className="">
-          <div className="">IMG</div>
-          <div className="">UI/UX Design</div>
-          <div className="">Onboard application</div>
-        </div>
-        <div className="">
-          <div className="">IMG</div>
-          <div className="">Mobile application</div>
-          <div className="">Booking System</div>
-        </div>
-        <div className="">
-          <div className="">IMG</div>
-          <div className="">Front End application</div>
-          <div className="">Juice product homepage</div>
-        </div>
+      <div className="grid grid-cols-2 gap-3">
+        <BusinessCard img={SmartHome} title="Smart home dashboard" subtitle="Full stack application" />
+        <BusinessCard img={OnBoard} title="Onboard application" subtitle="UI/UX Design" />
+        <BusinessCard img={Booking} title="Booking System" subtitle="Mobile application" />
+        <BusinessCard img={JuiceProduct} title="Juice product homepage" subtitle="Front End application" />
       </div>
 
       <div>See more ---</div>
