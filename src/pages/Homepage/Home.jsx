@@ -29,14 +29,14 @@ const Home = () => {
 			color: "bg-green-800",
 		},
 		{
-			title: "Edie Homepage (On-Going)",
+			title: "Edie Homepage",
 			url: "/edie-homepage",
-			color: "bg-purple-800",
+			color: "bg-green-800",
 		},
 		{
-			title: "Portfolio (Pending)",
+			title: "Portfolio (OnGoing)",
 			url: "/portfolio",
-			color: "bg-red-800",
+			color: "bg-purple-800",
 		},
 		{
 			title: "Deploying App Tips",
