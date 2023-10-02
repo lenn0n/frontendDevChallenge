@@ -40,8 +40,13 @@ const EdieHomepage = () => {
     )
   }
 
+  const scrollTo = (id) => {
+    document.getElementById(id).scrollIntoView({
+      behavior: 'smooth'
+    });
+  }
   return (<>
-    <div className="container mx-auto flex flex-col items-center" >
+    <div id="home" className="container mx-auto flex flex-col items-center" >
       <div className="max-w-full lg:w-[1100px]">
         <div className="flex justify-between items-center m-[20px]">
           <div className="font-extrabold text-[36px] font-heebo">Edie</div>
@@ -49,11 +54,11 @@ const EdieHomepage = () => {
             <span className="material-icons text-[36px] block md:hidden">menu</span>
           </div>
           <ul className="justify-between hidden md:flex gap-7">
-            <li className="flex items-center font-poppins font-medium text-[24px]">Home</li>
-            <li className="flex items-center font-poppins font-medium text-[24px]">Services</li>
-            <li className="flex items-center font-poppins font-medium text-[24px]">Our Works</li>
-            <li className="flex items-center font-poppins font-medium text-[24px]">Clients</li>
-            <li className="flex items-center font-poppins font-medium text-[24px]">Contact</li>
+            <li role="button" className="flex items-center font-poppins font-medium text-[24px]" onClick={() => { scrollTo('home') }}>Home</li>
+            <li role="button" className="flex items-center font-poppins font-medium text-[24px]" onClick={() => { scrollTo('services') }}>Services</li>
+            <li role="button" className="flex items-center font-poppins font-medium text-[24px]" onClick={() => { scrollTo('our-works') }}>Our Works</li>
+            <li role="button" className="flex items-center font-poppins font-medium text-[24px]" onClick={() => { scrollTo('clients') }}>Clients</li>
+            <li role="button" className="flex items-center font-poppins font-medium text-[24px]" onClick={() => { scrollTo('contact') }}>Contact</li>
           </ul>
         </div>
 
@@ -93,11 +98,11 @@ const EdieHomepage = () => {
           </div>
         </div>
 
-        <div className="font-poppins font-medium text-[24px] md:text-[36px] md:mt-[140px] m-[20px] ">
+        <div id="services" className="font-poppins font-medium text-[24px] md:text-[36px] md:mt-[140px] m-[20px]">
           We offer high demand services
         </div>
 
-        <div className="md:mt-[42px] flex gap-[41px] lg:gap-4 flex-wrap m-[20px] justify-center">
+        <div className="md:mt-[42px] flex gap-[41px] md:gap-4 flex-wrap md:flex-nowrap m-[20px] md:m-[0px] justify-center">
           <ServiceCard
             icon={<span className="material-icons text-[36px] text-[#fff] p-[20px] bg-[#2D9CDB] rounded-[16px]">edit</span>}
             title="UI/UX Design"
@@ -118,7 +123,7 @@ const EdieHomepage = () => {
           />
         </div>
 
-        <div className="font-poppins font-medium text-[24px] md:text-[36px] mt-[90px] md:mt-[194px] mx-[20px]">
+        <div id="our-works" className="font-poppins font-medium text-[24px] md:text-[36px] mt-[90px] md:mt-[194px] mx-[20px]">
           Good design means good business
         </div>
 
@@ -136,7 +141,7 @@ const EdieHomepage = () => {
           </span>
         </div>
 
-        <div className="grid md:grid-cols-2 mt-[50px] md:mt-[40px] mx-[20px] ">
+        <div id="clients" className="grid md:grid-cols-2 mt-[50px] md:mt-[40px] mx-[20px] ">
           <div className="flex place-content-center flex-col w-[75%]">
             <div className="font-poppins text-[#EB5757] font-medium text-[18px]">Meet the team</div>
             <div className="font-poppins text-[#333333] font-medium text-[36px]">We are chilled and a laidback team</div>
@@ -166,16 +171,16 @@ const EdieHomepage = () => {
         </div>
 
       </div>
-      <div className="bg-[#100E1D] text-[#FFFFFF] mt-[50px] md:mt-[200px] grid lg:grid-cols-3 gap-[40px] md:gap-4 p-[20px] md:p-[46px] w-[100%]
+      <div id="contact" className="bg-[#100E1D] text-[#FFFFFF] mt-[50px] md:mt-[200px] grid lg:grid-cols-3 gap-[40px] md:gap-4 p-[20px] md:p-[46px] w-[100%]
     ">
         <div className="grid md:grid-cols-3">
           <div></div>
           <div className="col-span-3 lg:col-span-1">
-            <div className="font-poppins font-normal text-[18px] mb-4">Home</div>
-            <div className="font-poppins font-normal text-[18px] mb-4">Services</div>
-            <div className="font-poppins font-normal text-[18px] mb-4">Our Works</div>
-            <div className="font-poppins font-normal text-[18px] mb-4">Clients</div>
-            <div className="font-poppins font-normal text-[18px] ">Contact</div>
+            <div role="button" className="font-poppins font-normal text-[18px] mb-4" onClick={() => { scrollTo('home') }}>Home</div>
+            <div role="button" className="font-poppins font-normal text-[18px] mb-4" onClick={() => { scrollTo('services') }}>Services</div>
+            <div role="button" className="font-poppins font-normal text-[18px] mb-4" onClick={() => { scrollTo('our-works') }}>Our Works</div>
+            <div role="button" className="font-poppins font-normal text-[18px] mb-4" onClick={() => { scrollTo('clients') }}>Clients</div>
+            <div role="button" className="font-poppins font-normal text-[18px] " onClick={() => { scrollTo('contact') }}>Contact</div>
           </div>
           <div></div>
         </div>
