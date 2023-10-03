@@ -11,6 +11,7 @@ import Recipe from "@pages/ResponsiveWebDev/FourthStage/Recipe";
 import Gallery from "@pages/ResponsiveWebDev/FifthStage/Gallery";
 import Checkout from "@pages/ResponsiveWebDev/SixthStage/Checkout";
 import EdieHomepage from "@pages/ResponsiveWebDev/SeventhStage/EdieHomepage";
+import Portfolio from "@pages/ResponsiveWebDev/EighthStage/Portfolio";
 
 export default [
 	{
@@ -74,6 +75,14 @@ export default [
 		element: (
 			<DefaultWrapper text="Checkout Page">
 				<EdieHomepage />
+			</DefaultWrapper>
+		),
+	},
+	{
+		path: "/portfolio",
+		element: (
+			<DefaultWrapper text="Portfolio">
+				<Portfolio />
 			</DefaultWrapper>
 		),
 	},

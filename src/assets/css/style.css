@@ -470,6 +470,10 @@
 	font-family: Heebo;
 }
 
+.font-mon{
+	font-family: Montserrat;
+}
+
 @media (max-width: 550px) {
 	.interior-consultant-container {
 		padding: 14px;
