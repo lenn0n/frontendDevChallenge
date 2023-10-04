@@ -248,11 +248,11 @@ const Portfolio = () => {
     return (
       <>
         <div className="grid grid-cols-4 gap-[24px] font-mon">
-          <div className="col-span-1">
+          <div className="col-span-4 md:col-span-1">
             <img src={preview} alt="" className="shadow-lg rounded-[12px]" />
           </div>
-          <div className="col-span-3">
-            <div className="font-medium font-mon text-[16px] text-[#4F4F4F]">
+          <div className="col-span-4 md:col-span-3">
+            <div className="font-medium flex flex-wrap font-mon text-[16px] text-[#4F4F4F]">
               {tags?.length > 0 &&
                 tags?.map((tag) => {
                   return (
@@ -268,8 +268,8 @@ const Portfolio = () => {
               {desc}
             </div>
             <div className="flex gap-5 mt-4">
-              <a href={url} target="_blank" className="bg-[#2F80ED] text-[#fff] py-[13px] px-[40px] rounded-[12px]">Demo</a>
-              <a href={repo} target="_blank" className="border-[#2F80ED] text-[#2F80ED] border-[2px] py-[13px] px-[40px] rounded-[12px] hover:bg-[#2F80ED] hover:text-[#fff]">Code</a>
+              <a href={url} target="_blank" className="bg-[#2F80ED] text-[#fff] py-[7px] px-[20px] md:py-[13px] md:px-[40px] rounded-[12px]">Demo</a>
+              <a href={repo} target="_blank" className="border-[#2F80ED] text-[#2F80ED] border-[2px] py-[7px] px-[20px] md:py-[13px] md:px-[40px] rounded-[12px] hover:bg-[#2F80ED] hover:text-[#fff]">Code</a>
             </div>
           </div>
         </div>
@@ -340,7 +340,7 @@ const Portfolio = () => {
                   </Card>
                 </div>
                 <Card className="grow" padding="p-[12px]">
-                  <div className="flex justify-between text-[#4F4F4F] font-mon">
+                  <div className="flex justify-between flex-wrap text-[#4F4F4F] font-mon">
                     <span className="text-[18px]  font-medium">
                       Projects ({Projects?.length || '0'})
                     </span>

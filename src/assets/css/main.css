@@ -1376,6 +1376,21 @@ video {
   padding-bottom: 9px;
 }
 
+.py-\[7px\]{
+  padding-top: 7px;
+  padding-bottom: 7px;
+}
+
+.py-\[1px\]{
+  padding-top: 1px;
+  padding-bottom: 1px;
+}
+
+.py-\[10px\]{
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
 .pe-4{
   -webkit-padding-end: 1rem;
           padding-inline-end: 1rem;
@@ -2051,6 +2066,10 @@ video {
     grid-column: span 1 / span 1;
   }
 
+  .md\:col-span-3{
+    grid-column: span 3 / span 3;
+  }
+
   .md\:float-right{
     float: right;
   }
@@ -2198,6 +2217,16 @@ video {
   .md\:py-\[10px\]{
     padding-top: 10px;
     padding-bottom: 10px;
+  }
+
+  .md\:px-\[40px\]{
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  .md\:py-\[13px\]{
+    padding-top: 13px;
+    padding-bottom: 13px;
   }
 
   .md\:text-\[18px\]{
