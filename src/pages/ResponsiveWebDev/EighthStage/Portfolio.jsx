@@ -7,7 +7,131 @@ import Game1 from "@assets/images/game1.jpg"
 import Music1 from "@assets/images/music1.jpg"
 import Book1 from "@assets/images/books1.jpg"
 
+import Recipe from "@assets/images/previews/recipe.png"
+import ReactBoilerplate from "@assets/images/previews/react.png"
+import Edie from "@assets/images/previews/edie.png"
+import Gallery from "@assets/images/previews/gallery.png"
+import Interior from "@assets/images/previews/interior.png"
+import Team from "@assets/images/previews/team.png"
+
+
 const Portfolio = () => {
+  const FrontendSkills = [
+    {
+      name: "Javascript",
+      barWidth: "w-[100%]"
+    },
+    {
+      name: "React.js",
+      barWidth: "w-[90%]"
+    },
+    {
+      name: "Vue.js",
+      barWidth: "w-[95%]"
+    },
+    {
+      name: "CSS",
+      barWidth: "w-[70%]"
+    },
+    {
+      name: "TailwindCSS",
+      barWidth: "w-[78%]"
+    },
+    {
+      name: "HTML/DOM",
+      barWidth: "w-[100%]"
+    },
+
+  ]
+
+  const DesignSkills = [
+    {
+      name: "Photoshop",
+      barWidth: "w-[80%]"
+    },
+    {
+      name: "AutoCAD",
+      barWidth: "w-[60%]"
+    }
+  ]
+
+  const Experiences = [
+    {
+      companyLogo: Company1,
+      date: "September 14, 2020 - Current",
+      jobTitle: "WEB DEVELOPER",
+      jobDesc: "Delivering the best customer experience, creating hooks, constructing utils/helpers, developing pages, applying fixes on bugs and so on."
+
+    }
+  ]
+
+  const Hobbies = [
+    {
+      logo: Book1,
+      name: "Reading",
+      desc: "Become updated on what's hot in the internet."
+    },
+    {
+      logo: Music1,
+      name: "Music",
+      desc: "Listening to motivational songs helps me alot."
+    },
+    {
+      logo: Game1,
+      name: "Gaming",
+      desc: "To relieve my stress and prevent being burnout."
+    }
+  ]
+
+  const Projects = [
+    {
+      tags: "#React #Tailwind #Responsive",
+      title: "Edie Homepage",
+      desc: "In this project, I work with HTML and CSS to create a responsive page . The design is from devchallenge.io. Donec aliquam est dui, vel vestibulum diam sollicitudin id. Quisque feugiat malesuada molestie. ",
+      url: "https://fir-crud-8d71b.web.app/edie-homepage",
+      repo: "https://github.com/lenn0n/devchallenges/tree/main/src/pages/ResponsiveWebDev/SeventhStage/EdieHomepage.jsx",
+      preview: Edie
+    },
+    {
+      tags: "#React #Tailwind #Responsive",
+      title: "Gallery Page",
+      desc: "In this project, I work with HTML and CSS to create a responsive page . The design is from devchallenge.io. Donec aliquam est dui, vel vestibulum diam sollicitudin id. Quisque feugiat malesuada molestie. ",
+      url: "https://fir-crud-8d71b.web.app/gallery",
+      repo: "https://github.com/lenn0n/devchallenges/tree/main/src/pages/ResponsiveWebDev/FifthStage/Gallery.jsx",
+      preview: Gallery
+    },
+    {
+      tags: "#React #Tailwind #Responsive",
+      title: "Interior Consultant",
+      desc: "In this project, I work with HTML and CSS to create a responsive page . The design is from devchallenge.io. Donec aliquam est dui, vel vestibulum diam sollicitudin id. Quisque feugiat malesuada molestie. ",
+      url: "https://fir-crud-8d71b.web.app/interior-consultant",
+      repo: "https://github.com/lenn0n/devchallenges/tree/main/src/pages/ResponsiveWebDev/ThirdStage/InteriorConsultant.jsx",
+      preview: Interior
+    },
+    {
+      tags: "#React #Tailwind #Responsive",
+      title: "React Boilerplate",
+      desc: "In this project, I work with HTML and CSS to create a responsive page . The design is from devchallenge.io. Donec aliquam est dui, vel vestibulum diam sollicitudin id. Quisque feugiat malesuada molestie. ",
+      url: "https://fir-crud-8d71b.web.app/react-boilerplate",
+      repo: "https://github.com/lenn0n/devchallenges/blob/main/src/pages/HowTo/ReactBoilerplate.jsx",
+      preview: ReactBoilerplate
+    },
+    {
+      tags: "#React #Tailwind #Responsive",
+      title: "Recipe Blog",
+      desc: "In this project, I work with HTML and CSS to create a responsive page . The design is from devchallenge.io. Donec aliquam est dui, vel vestibulum diam sollicitudin id. Quisque feugiat malesuada molestie. ",
+      url: "https://fir-crud-8d71b.web.app/recipe",
+      repo: "https://github.com/lenn0n/devchallenges/blob/main/src/pages/ResponsiveWebDev/FourthStage/Recipe.jsx",
+      preview: Recipe
+    }
+
+
+  ]
+
+  const Blogs = [
+
+  ]
+
 
   const SkillBar = ({ name, barWidth }) => {
     return (
@@ -106,22 +230,28 @@ const Portfolio = () => {
     </>
   }
 
-  const Project = ({ tags, title, desc, url, banner }) => {
+  const Project = ({ tags, title, desc, url, preview, repo }) => {
     return (
       <>
-        <div className="flex flex-wrap gap-5">
-          <div className="">
-            <img src={banner} alt="" />
+        <div className="grid grid-cols-4 gap-[24px] font-mon">
+          <div className="col-span-1">
+            <img src={preview} alt="" className="shadow-lg rounded-[12px]" />
           </div>
-          <div className="font-medium font-mon text-[16px] text-[#4F4F4F]">
-            {title}
+          <div className="col-span-3">
+            <div className="font-medium font-mon text-[16px] text-[#4F4F4F]">
+              {tags}
+            </div>
+            <div className="font-medium font-mon text-[24px] text-[#333] mt-[25px]">
+              {title}
+            </div>
+            <div className="text-[#828282] text-[16px] font-medium mt-[18px]">
+              {desc}
+            </div>
+            <div className="flex gap-5 mt-4">
+              <a href={url} target="_blank" className="bg-[#2F80ED] text-[#fff] py-[13px] px-[40px] rounded-[12px]">Demo</a>
+              <a href={repo} target="_blank" className="border-[#2F80ED] text-[#2F80ED] border-[2px] py-[13px] px-[40px] rounded-[12px] hover:bg-[#2F80ED] hover:text-[#fff]">Code</a>
+            </div>
           </div>
-          <div className="text-[#828282] text-[16px] font-medium">
-            {desc}
-          </div>
-
-          <button className="bg-[#2F80ED] text-[#fff] py-[13px] px-[40px] rounded-[12px]">Demo</button>
-          <button className="border-[#2F80ED] text-[#2F80ED] border-[#2F80ED] py-[13px] px-[40px] rounded-[12px]">Code</button>
         </div>
       </>
     )
@@ -139,38 +269,25 @@ const Portfolio = () => {
                 </Card>
                 <Card>
                   <div className="font-mon font-medium text-[24px] mb-[44px]">Experiences</div>
-                  <Experience
-                    companyLogo={Company1}
-                    date="September 14, 2020 - Current"
-                    jobTitle="WEB DEVELOPER"
-                    jobDesc="Delivering the best customer experience, creating hooks, constructing utils/helpers, developing pages, applying fixes on bugs and so on."
-                  />
-                  {/* <Experience
-                    companyLogo={Company2}
-                    date="December 2010 - June 2015"
-                    jobTitle="Self-taught Developer"
-                    jobDesc="Basic HTML CSS and Javascript, building personal website and exploring the world."
-                  /> */}
+                  {
+                    Experiences?.length > 0 &&
+                    Experiences.map((data) => {
+                      return (
+                        <Experience {...data} />
+                      )
+                    })
+                  }
                 </Card>
                 <Card>
                   <div className="font-mon font-medium text-[24px] mb-[44px]">Hobbies</div>
-
-                  <Hobby
-                    logo={Book1}
-                    name="Reading"
-                    desc="Become updated on what's hot in the internet."
-                  />
-                  <Hobby
-                    logo={Music1}
-                    name="Music"
-                    desc="Listening to motivational songs helps me alot."
-                  />
-                  <Hobby
-                    logo={Game1}
-                    name="Gaming"
-                    desc="To relieve my stress and prevent being burnout."
-                  />
-
+                  {
+                    Hobbies?.length > 0 &&
+                    Hobbies.map((data) => {
+                      return (
+                        <Hobby {...data} />
+                      )
+                    })
+                  }
                 </Card>
               </div>
             </div>
@@ -179,62 +296,52 @@ const Portfolio = () => {
                 <div className="flex flex-col md:flex-row flex-wrap gap-[32px]">
                   <Card className="grow shrink-1">
                     <div className="font-mon font-bold uppercase text-[#4F4F4F] text-[11px] sm:text-[18px]">Front End</div>
-                    <SkillBar
-                      name="Javascript"
-                      barWidth="w-[100%]"
-                    />
-                    <SkillBar
-                      name="React.js"
-                      barWidth="w-[90%]"
-                    />
-                    <SkillBar
-                      name="Vue.js"
-                      barWidth="w-[95%]"
-                    />
-                    <SkillBar
-                      name="CSS"
-                      barWidth="w-[70%]"
-                    />
-                    <SkillBar
-                      name="TailwindCSS"
-                      barWidth="w-[78%]"
-                    />
-                    <SkillBar
-                      name="HTML/DOM"
-                      barWidth="w-[100%]"
-                    />
+                    {FrontendSkills?.length > 0 &&
+                      FrontendSkills.map((data) => {
+                        return (
+                          <SkillBar
+                            {...data}
+                          />
+                        )
+                      })
+                    }
                   </Card>
                   <Card className="grow">
                     <div className="font-mon font-bold uppercase text-[#4F4F4F] text-[11px] sm:text-[18px]">Design</div>
-                    <SkillBar
-                      name="Photoshop"
-                      barWidth="w-[80%]"
-                    />
-                    <SkillBar
-                      name="AutoCAD"
-                      barWidth="w-[60%]"
-                    />
+                    {DesignSkills?.length > 0 &&
+                      DesignSkills.map((data) => {
+                        return (
+                          <SkillBar
+                            {...data}
+                          />
+                        )
+                      })
+                    }
                   </Card>
                 </div>
-                <Card className="grow" padding="p-[22px]">
-                  Projects (10)
+                <Card className="grow" padding="p-[12px]">
+                  <span className="text-[#4F4F4F] text-[18px] font-mon font-medium">
+                    Projects ({Projects?.length || '0'})
+                  </span>
                 </Card>
-                <Card className="grow">
-                  <Project
-                    tags="#HTML #CSS #responsive"
-                    title="Recipe Blog"
-                    desc="In this project, I work with HTML and CSS to create a responsive page . The design is from devchallenge.io. "
-                    url="https://fir-crud-8d71b.web.app/recipe"
-                  />
-                </Card>
+                {Projects?.length > 0 &&
+                  Projects.map((data) => {
+                    return (
+                      <Card className="grow">
+                        <Project {...data} />
+                      </Card>
+                    )
+                  })
+                }
 
+                {/* 
                 <Card className="grow" padding="p-[22px]">
                   Blogs (?)
                 </Card>
 
                 <Card className="grow">
                   BLOG 1
-                </Card>
+                </Card> */}
               </div>
 
             </div>
