@@ -15,6 +15,9 @@ module.exports = {
 			},
 			boxShadow: {
         'lenon': '0px 0px 40px 15px rgba(0, 0, 0, 0.3)',
+      },
+			backgroundImage: {
+        'hero-pattern': "url('../images/blur-radial.svg')",
       }
 		},
 	},

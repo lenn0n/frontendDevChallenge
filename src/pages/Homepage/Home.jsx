@@ -13,41 +13,41 @@ const Home = () => {
 		{
 			title: "404 Not Found",
 			url: "/404",
-			color: "bg-green-800",
+			color: "bg-[#212936] hover:text-[#000] hover:bg-white",
 		},
-		{ title: "My Team Page", url: "/team", color: "bg-green-800" },
+		{ title: "My Team Page", url: "/team", color: "bg-[#212936] hover:text-[#000] hover:bg-white" },
 		{
 			title: "Interior Consultant",
 			url: "/interior-consultant",
-			color: "bg-green-800",
+			color: "bg-[#212936] hover:text-[#000] hover:bg-white",
 		},
-		{ title: "Recipe Page", url: "/recipe", color: "bg-green-800" },
-		{ title: "My Gallery", url: "/gallery", color: "bg-green-800" },
+		{ title: "Recipe Page", url: "/recipe", color: "bg-[#212936] hover:text-[#000] hover:bg-white" },
+		{ title: "My Gallery", url: "/gallery", color: "bg-[#212936] hover:text-[#000] hover:bg-white" },
 		{
 			title: "Checkout Page",
 			url: "/checkout",
-			color: "bg-green-800",
+			color: "bg-[#212936] hover:text-[#000] hover:bg-white",
 		},
 		{
 			title: "Edie Homepage",
 			url: "/edie-homepage",
-			color: "bg-green-800",
+			color: "bg-[#212936] hover:text-[#000] hover:bg-white",
 		},
 		{
 			title: "Portfolio",
 			url: "/portfolio",
-			color: "bg-green-800",
+			color: "bg-[#212936] hover:text-[#000] hover:bg-white",
 		},
 		{
 			title: "Deploying App Tips",
 			url: "/deploy-apps",
-			color: "bg-blue-800",
+			color: "bg-[#212936] hover:text-[#000] hover:bg-white",
 			prefixTitle: " ",
 		},
 		{
 			title: "React + Webpack5 Boilerplate",
 			url: "/react-boilerplate",
-			color: "bg-blue-800 grow-0",
+			color: "bg-[#212936] hover:text-[#000] hover:bg-white",
 			prefixTitle: " ",
 		},
 	];
@@ -77,13 +77,13 @@ const Home = () => {
 		);
 	};
 	return (
-		<>
+		<div className=" bg-hero-pattern bg-contain bg-[#121826] ">
 			<div className="container mx-auto flex justify-center items-center flex-col gap-5 md:h-[100vh!important] h-[100%!important] ">
 				<div
-					className="font-bold text-rose-500 text-[20px] first-letter:text-[40px] md:text-[50px] md:first-letter:text-[80px] hover:text-blue-500"
+					className="font-bold text-white text-[24px] first-letter:text-[40px] md:text-[50px] md:first-letter:text-[80px] hover:text-blue-500"
 					role="button"
 				>
-					Responsive Web Developer
+					Responsive WEB Developer
 				</div>
 				<div className="grid md:grid-cols-2 gap-4">
 					{list.map((data, index) => {
@@ -91,7 +91,7 @@ const Home = () => {
 					})}
 				</div>
 			</div>
-		</>
+		</div>
 	);
 };
 
