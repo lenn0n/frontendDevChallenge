@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import Footer from "@components/Footer/Footer"
 import Profile from "@assets/images/profile.png"
 import Company1 from "@assets/images/company1.png"
@@ -14,8 +14,16 @@ import Gallery from "@assets/images/previews/gallery.png"
 import Interior from "@assets/images/previews/interior.png"
 import Team from "@assets/images/previews/team.png"
 
-
 const Portfolio = () => {
+
+  const [tag, setTag] = useState("")
+  const handleSetTag = (tag) => {
+    setTag(tag);
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    })
+  }
   const FrontendSkills = [
     {
       name: "Javascript",
@@ -85,7 +93,7 @@ const Portfolio = () => {
 
   const Projects = [
     {
-      tags: "#React #Tailwind #Responsive",
+      tags: ["#React", "#Tailwind", "#Responsive", "#Elementary"],
       title: "Edie Homepage",
       desc: "In this project, I work with HTML and CSS to create a responsive page . The design is from devchallenge.io. Donec aliquam est dui, vel vestibulum diam sollicitudin id. Quisque feugiat malesuada molestie. ",
       url: "https://fir-crud-8d71b.web.app/edie-homepage",
@@ -93,7 +101,7 @@ const Portfolio = () => {
       preview: Edie
     },
     {
-      tags: "#React #Tailwind #Responsive",
+      tags: ["#React", "#Tailwind", "#Responsive"],
       title: "Gallery Page",
       desc: "In this project, I work with HTML and CSS to create a responsive page . The design is from devchallenge.io. Donec aliquam est dui, vel vestibulum diam sollicitudin id. Quisque feugiat malesuada molestie. ",
       url: "https://fir-crud-8d71b.web.app/gallery",
@@ -101,7 +109,7 @@ const Portfolio = () => {
       preview: Gallery
     },
     {
-      tags: "#React #Tailwind #Responsive",
+      tags: ["#React", "#Tailwind", "#Responsive"],
       title: "Interior Consultant",
       desc: "In this project, I work with HTML and CSS to create a responsive page . The design is from devchallenge.io. Donec aliquam est dui, vel vestibulum diam sollicitudin id. Quisque feugiat malesuada molestie. ",
       url: "https://fir-crud-8d71b.web.app/interior-consultant",
@@ -109,7 +117,7 @@ const Portfolio = () => {
       preview: Interior
     },
     {
-      tags: "#React #Tailwind #Responsive",
+      tags: ["#React", "#Tailwind", "#Responsive", "#Tutorial"],
       title: "React Boilerplate",
       desc: "In this project, I work with HTML and CSS to create a responsive page . The design is from devchallenge.io. Donec aliquam est dui, vel vestibulum diam sollicitudin id. Quisque feugiat malesuada molestie. ",
       url: "https://fir-crud-8d71b.web.app/react-boilerplate",
@@ -117,21 +125,27 @@ const Portfolio = () => {
       preview: ReactBoilerplate
     },
     {
-      tags: "#React #Tailwind #Responsive",
+      tags: ["#React", "#Tailwind", "#Responsive"],
       title: "Recipe Blog",
       desc: "In this project, I work with HTML and CSS to create a responsive page . The design is from devchallenge.io. Donec aliquam est dui, vel vestibulum diam sollicitudin id. Quisque feugiat malesuada molestie. ",
       url: "https://fir-crud-8d71b.web.app/recipe",
       repo: "https://github.com/lenn0n/devchallenges/blob/main/src/pages/ResponsiveWebDev/FourthStage/Recipe.jsx",
       preview: Recipe
-    }
-
+    },
+    {
+      tags: ["#React", "#Tailwind", "#Responsive"],
+      title: "Team Page",
+      desc: "In this project, I work with HTML and CSS to create a responsive page . The design is from devchallenge.io. Donec aliquam est dui, vel vestibulum diam sollicitudin id. Quisque feugiat malesuada molestie. ",
+      url: "https://fir-crud-8d71b.web.app/team",
+      repo: "https://github.com/lenn0n/devchallenges/blob/main/src/pages/ResponsiveWebDev/SecondStage/TeamPage.jsx",
+      preview: Team
+    },
 
   ]
 
   const Blogs = [
 
   ]
-
 
   const SkillBar = ({ name, barWidth }) => {
     return (
@@ -239,7 +253,13 @@ const Portfolio = () => {
           </div>
           <div className="col-span-3">
             <div className="font-medium font-mon text-[16px] text-[#4F4F4F]">
-              {tags}
+              {tags?.length > 0 &&
+                tags?.map((tag) => {
+                  return (
+                    <span className="me-2 hover:text-[#2F80ED] hover:font-bold" role="button" onClick={() => { handleSetTag(tag) }}>{tag}</span>
+                  )
+                })
+              }
             </div>
             <div className="font-medium font-mon text-[24px] text-[#333] mt-[25px]">
               {title}
@@ -320,17 +340,36 @@ const Portfolio = () => {
                   </Card>
                 </div>
                 <Card className="grow" padding="p-[12px]">
-                  <span className="text-[#4F4F4F] text-[18px] font-mon font-medium">
-                    Projects ({Projects?.length || '0'})
-                  </span>
+                  <div className="flex justify-between text-[#4F4F4F] font-mon">
+                    <span className="text-[18px]  font-medium">
+                      Projects ({Projects?.length || '0'})
+                    </span>
+                    {tag &&
+                      <span>
+                        Showing results with tag of <strong>{tag}</strong>
+                        <span role="button" className="font-bold ms-3 text-[#2F80ED]" onClick={() => { setTag("") }}>(Clear)</span>
+                      </span>
+                    }
+                  </div>
                 </Card>
-                {Projects?.length > 0 &&
+                {Projects?.length > 0 && tag == '' &&
                   Projects.map((data) => {
                     return (
                       <Card className="grow">
                         <Project {...data} />
                       </Card>
                     )
+                  })
+                }
+
+                {Projects?.length > 0 && tag != '' &&
+                  Projects.map((data) => {
+                    if (data?.tags?.indexOf(tag) != -1) {
+                      return (<Card className="grow">
+                        <Project {...data} />
+                      </Card>)
+                    }
+
                   })
                 }
 

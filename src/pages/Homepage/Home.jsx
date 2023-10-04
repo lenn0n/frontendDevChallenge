@@ -34,9 +34,9 @@ const Home = () => {
 			color: "bg-green-800",
 		},
 		{
-			title: "Portfolio (OnGoing)",
+			title: "Portfolio",
 			url: "/portfolio",
-			color: "bg-purple-800",
+			color: "bg-green-800",
 		},
 		{
 			title: "Deploying App Tips",

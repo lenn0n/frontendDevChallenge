@@ -1821,6 +1821,18 @@ video {
   background-color: rgb(47 128 237 / var(--tw-bg-opacity));
 }
 
+.hover\:text-\[20px\]:hover{
+  font-size: 20px;
+}
+
+.hover\:text-\[18px\]:hover{
+  font-size: 18px;
+}
+
+.hover\:font-bold:hover{
+  font-weight: 700;
+}
+
 .hover\:text-blue-500:hover{
   --tw-text-opacity: 1;
   color: rgb(59 130 246 / var(--tw-text-opacity));
@@ -1844,6 +1856,11 @@ video {
 .hover\:text-\[\#fff\]:hover{
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.hover\:text-\[\#2F80ED\]:hover{
+  --tw-text-opacity: 1;
+  color: rgb(47 128 237 / var(--tw-text-opacity));
 }
 
 .hover\:shadow-lenon:hover{
