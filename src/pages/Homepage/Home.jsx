@@ -77,14 +77,23 @@ const Home = () => {
 		);
 	};
 	return (
-		<div className=" bg-hero-pattern bg-contain bg-[#121826] ">
-			<div className="container mx-auto flex justify-center items-center flex-col gap-5 md:h-[100vh!important] h-[100%!important] ">
+		<div className=" bg-hero-pattern bg-cover bg-[#121826] ">
+			<div className="block lg:absolute m-4 mt-0 pt-4 font-mon">
 				<div
-					className="font-bold text-white text-[24px] first-letter:text-[40px] md:text-[50px] md:first-letter:text-[80px] hover:text-blue-500"
+					className="font-bold text-white text-[29px] hover:text-rose-500"
 					role="button"
 				>
-					Responsive WEB Developer
+					RESPONSIVE WEB DEVELOPER PATH
 				</div>
+				<div
+					className="font-bold text-slate-400 break-all  text-[16px] md:text-[16px] hover:text-rose-500"
+					role="button"
+				>
+					https://legacy.devchallenges.io/paths/responsive-web-developer
+				</div>
+
+			</div>
+			<div className="container font-mon mx-auto flex pb-5 justify-center items-center flex-col gap-5 md:h-[100vh!important] h-[100%!important] ">
 				<div className="grid md:grid-cols-2 gap-4">
 					{list.map((data, index) => {
 						return <Component {...data} index={index + 1} />;
