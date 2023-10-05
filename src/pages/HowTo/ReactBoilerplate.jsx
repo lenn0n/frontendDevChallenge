@@ -121,6 +121,61 @@ const ReactBoilerPlate = () => {
 			text: "I didn't include the react-router-dom here simply because the documentation itself is very straightforward. ",
 			code: "https://reactrouter.com/en/main",
 		},
+		{
+			text: "To support Typescript, install the packages below",
+			code: "npm install --save-dev typescript ts-loader @types/react @types/react-dom @babel/preset-typescript",
+		},
+
+		{
+			text: "Create file in root folder: tsconfig.json",
+			code: `
+			{
+				"compilerOptions": {
+					"target": "es5",
+					"module": "commonjs",
+					"jsx": "react",
+					"outDir": "./dist",
+					"strict": true,
+					"esModuleInterop": true
+				},
+				"include": [
+					"./src/**/*"
+				]
+			}
+			`,
+		},
+		{
+			text: "Add this to webpack.config.js",
+			code: ` module.exports = {
+				// ...
+				module: {
+					rules: [
+						{
+							test: /\.(ts|tsx)$/,
+							exclude: /node_modules/,
+							use: 'ts-loader',
+						},
+						// other rules...
+					],
+				},
+				resolve: {
+					extensions: ['.tsx', '.ts', '.js'],
+				},
+			};`,
+		},
+		{
+			text: "Update .babelrc",
+			code: `
+			{ 
+				"presets": [ 
+					"@babel/preset-react",
+					"@babel/preset-env",
+					"@babel/preset-typescript"
+				] 
+			}
+			`,
+		},
+
 	];
 
 	const Step = ({ text, code }) => {
@@ -139,7 +194,7 @@ const ReactBoilerPlate = () => {
 			<div className="flex justify-center m-4">
 				<div>
 					<h1 className="text-white bg-blue-800 p-2 rounded-lg mb-3  font-bold text-[29px]">
-						React + Webpack5 Boilerplate
+						React + WP5 + Typescript
 					</h1>
 					<p>
 						{" "}

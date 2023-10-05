@@ -45,7 +45,7 @@ const Home = () => {
 			prefixTitle: " ",
 		},
 		{
-			title: "React + WP5 Boilerplate",
+			title: "React + WP5 + Typescript",
 			url: "/react-boilerplate",
 			color: "bg-[#212936] hover:text-[#000] hover:bg-white",
 			prefixTitle: " ",
