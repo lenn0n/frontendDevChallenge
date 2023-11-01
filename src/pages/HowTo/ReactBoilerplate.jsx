@@ -136,7 +136,12 @@ const ReactBoilerPlate = () => {
 					"jsx": "react",
 					"outDir": "./dist",
 					"strict": true,
-					"esModuleInterop": true
+					"esModuleInterop": true,
+					"resolveJsonModule": true,
+					"baseUrl": "./",
+					"paths": {
+						"@pages/*": ["./src/pages/*"]
+					},
 				},
 				"include": [
 					"./src/**/*"
@@ -173,6 +178,23 @@ const ReactBoilerPlate = () => {
 					"@babel/preset-typescript"
 				] 
 			}
+			`,
+		},
+		{
+			text: "Update webpack entry point from index.js to index.tsx. Add type in createRoot.",
+			code: `
+			./src/index.js > ./src/index.tsx
+
+			--------- index.tsx ----------------
+
+			import React from 'react';
+			import ReactDOM from 'react-dom/client';
+			import App from "@pages/App/App" // if any
+
+			const root = ReactDOM.createRoot(
+				document.getElementById("root") as HTMLElement
+			);
+			root.render(<App/>)
 			`,
 		},
 
