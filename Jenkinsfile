@@ -37,13 +37,13 @@ pipeline {
     // }
     stage("Push To Github (Clone to other repo)"){
       steps {
-        withCredentials([gitUsernamePassword(credentialsId: 'gh-cred', gitToolName: 'Default')]) {
-          git credentialsId: 'gh-cred', url: 'https://github.com/lenn0n/jenkins-post-build.git'
-          sh 'cd build'
-          sh 'git add .'
-          sh "git commit -m 'Commit from Jenkins'"
-          sh "git push -u origin HEAD:master"
-        }
+        git credentialsId: 'gh-cred', url: 'https://github.com/lenn0n/jenkins-post-build.git'
+        sh 'ls'
+        sh 'cd build'
+        sh 'ls'
+        sh 'git add .'
+        sh "git commit -m 'Commit from Jenkins'"
+        sh "git push -u origin HEAD:master"
       }
     }
     stage("Push To EC2"){
