@@ -30,7 +30,7 @@ pipeline {
           usernameVariable: "USERNAME",
           passwordVariable: "PASSWORD"
         )]) {
-          sh 'docker login --username $USERNAME -- password PASSWORD'
+          sh 'docker login --username $USERNAME --password $PASSWORD'
           sh 'docker push webapp:dev'
         } 
       }
