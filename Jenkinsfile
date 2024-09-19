@@ -41,8 +41,8 @@ pipeline {
             dir("neptune") {
               sh 'git clone https://github.com/lenn0n/jenkins-post-build.git'
               sh 'cd ..'
-              sh 'cp build neptune/jenkins-post-build'
               sh 'ls'
+              sh 'cp . neptune/jenkins-post-build'
               sh 'cd neptune'
               sh 'cd jenkins-post-build'
               sh 'ls'
