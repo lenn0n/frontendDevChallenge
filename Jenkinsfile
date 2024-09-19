@@ -39,7 +39,7 @@ pipeline {
       steps {
         withCredentials([gitUsernamePassword(credentialsId: 'gh-cred', gitToolName: 'Default')]) {
           sh 'git clone https://github.com/lenn0n/jenkins-post-build.git'
-          sh 'cp build jenkins-post-build'
+          sh 'cp -r build jenkins-post-build'
           sh 'cd jenkins-post-build'
           sh 'git add .'
           sh "git commit -m 'Commit from Jenkins'"
