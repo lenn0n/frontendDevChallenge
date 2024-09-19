@@ -42,13 +42,9 @@ pipeline {
           echo "${GIT_AUTHOR_EMAIL} ${GIT_COMMITTER_NAME}"
           sh "echo 'node_modules' > .gitignore"
           sh 'git add .'
-          sh "git commit -m 'Commit from Jenkins'"
-          sh "git push -u origin HEAD:master"
-          catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE') {
-            sh "exit 0"
-          }
+          sh "git commit -m 'Commit from Jenkins' || true"
+          sh "git push -u origin HEAD:master || true"
         }
-      
       }
     }
     stage("Push To EC2"){
