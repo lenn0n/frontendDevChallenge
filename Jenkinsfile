@@ -41,7 +41,7 @@ pipeline {
           git credentialsId: 'gh-cred', url: 'https://github.com/lenn0n/jenkins-post-build.git'
           echo "${GIT_AUTHOR_EMAIL} ${GIT_COMMITTER_NAME}"
           sh 'cd build'
-          echo 'node_modules' > .gitignore
+          sh "echo 'node_modules' > .gitignore"
           sh 'git add .'
           sh "git commit -m 'Commit from Jenkins'"
           sh "git push -u origin HEAD:master"
