@@ -40,6 +40,10 @@ pipeline {
           withCredentials([gitUsernamePassword(credentialsId: 'gh-cred', gitToolName: 'Default')]) {
             dir("neptune") {
               sh 'git clone https://github.com/lenn0n/jenkins-post-build.git'
+              sh 'cd ..'
+              sh 'cp build neptune/jenkins-post-build'
+              sh 'cd neptune'
+              sh 'cd jenkins-post-build'
               sh 'ls'
               // git(
               //     url: "https://github.com/lenn0n/jenkins-post-build.git",
