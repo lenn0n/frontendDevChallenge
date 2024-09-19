@@ -39,8 +39,7 @@ pipeline {
       steps {
         withCredentials([gitUsernamePassword(credentialsId: 'gh-cred', gitToolName: 'Default')]) {
           git credentialsId: 'gh-cred', url: 'https://github.com/lenn0n/jenkins-post-build.git'
-          sh 'cp -r build jenkins-post-build'
-          sh 'cd jenkins-post-build'
+          sh 'cd build'
           sh 'git add .'
           sh "git commit -m 'Commit from Jenkins'"
           sh "git push -u origin HEAD:master"
