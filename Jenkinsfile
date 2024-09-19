@@ -49,12 +49,12 @@ pipeline {
     }
     stage("Push To EC2"){
       steps {
-
+        echo 'TBD'
       }
     }
     stage("Restart Application (PM2, Deployments)"){
       steps {
-
+        echo 'TBD'
       }
     }
 
