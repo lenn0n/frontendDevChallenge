@@ -45,6 +45,9 @@ pipeline {
           sh "git commit -m 'Commit from Jenkins'"
           sh "git push -u origin HEAD:master"
         }
+        catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE') {
+          sh "exit 1"
+        }
       }
     }
     stage("Push To EC2"){
