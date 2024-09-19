@@ -37,11 +37,12 @@ pipeline {
     // }
     stage("Push To Github"){
       steps {
-        git branch: 'master', url: 'https://github.com/lenn0n/jenkins-post-build.git'
-        sh 'git config --global user.name "Jenkins"'
-        sh 'git add .'
-        sh "git commit -m 'Commit from Jenkins'"
         withCredentials([gitUsernamePassword(credentialsId: 'gh-cred', gitToolName: 'Default')]) {
+            git branch: 'master', url: 'https://github.com/lenn0n/jenkins-post-build.git'
+            sh 'git config --global user.email "auto@jenkins.com"'
+            sh 'git config --global user.name "Jenkins"'
+            sh 'git add .'
+            sh "git commit -m 'Commit from Jenkins'"
             sh "git push -u origin HEAD:master"
         }
       }
