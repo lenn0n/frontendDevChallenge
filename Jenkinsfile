@@ -38,7 +38,7 @@ pipeline {
     stage("Push To Github (Clone to other repo)"){
       steps {
         withCredentials([gitUsernamePassword(credentialsId: 'gh-cred', gitToolName: 'Default')]) {
-          sh 'git clone https://github.com/lenn0n/jenkins-post-build.git'
+          git credentialsId: 'gh-cred', url: 'https://github.com/lenn0n/jenkins-post-build.git'
           sh 'cp -r build jenkins-post-build'
           sh 'cd jenkins-post-build'
           sh 'git add .'
