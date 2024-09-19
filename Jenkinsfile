@@ -17,24 +17,24 @@ pipeline {
         }
       }
     }
-    // stage("Dockerize Application"){
-    //   steps {
-    //       sh 'docker build . -t lennonjansuy/webapp:dev'
-    //       sh 'docker images'
-    //   }
-    // }
-    // stage("Push To DockerHub"){
-    //   steps {
-    //     withCredentials ([
-    //       usernamePassword(credentialsId: 'docker-cred',
-    //       usernameVariable: "USERNAME",
-    //       passwordVariable: "PASSWORD"
-    //     )]) {
-    //       sh 'docker login --username $USERNAME --password $PASSWORD'
-    //       sh 'docker push lennonjansuy/webapp:dev'
-    //     } 
-    //   }
-    // }
+    stage("Dockerize Application"){
+      steps {
+          sh 'docker build . -t lennonjansuy/webapp:dev'
+          sh 'docker images'
+      }
+    }
+    stage("Push To DockerHub"){
+      steps {
+        withCredentials ([
+          usernamePassword(credentialsId: 'docker-cred',
+          usernameVariable: "USERNAME",
+          passwordVariable: "PASSWORD"
+        )]) {
+          sh 'docker login --username $USERNAME --password $PASSWORD'
+          sh 'docker push lennonjansuy/webapp:dev'
+        } 
+      }
+    }
     stage("Push To Github (Clone build to other repo)"){
       steps {
         withCredentials([gitUsernamePassword(credentialsId: 'gh-cred', gitToolName: 'Default')]) {
