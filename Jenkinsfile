@@ -38,9 +38,8 @@ pipeline {
     stage("Push To Github"){
       steps {
           withCredentials([gitUsernamePassword(credentialsId: 'gh-cred', gitToolName: 'Default')]) {
-            dir("neptune") {
+          
               sh 'git clone https://github.com/lenn0n/jenkins-post-build.git'
-              sh 'cd ..'
               sh 'ls'
               sh 'cp . neptune/jenkins-post-build'
               sh 'cd neptune'
@@ -58,7 +57,7 @@ pipeline {
               // sh "git commit -m 'Commit from Jenkins'"
               // sh "git push -u origin HEAD:master"
             }
-        }
+        
       }
     }
     stage("Push To EC2"){
