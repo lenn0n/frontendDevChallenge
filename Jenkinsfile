@@ -23,18 +23,18 @@ pipeline {
           sh 'docker images'
       }
     }
-    stage("Push To DockerHub"){
-      steps {
-        withCredentials ([
-          usernamePassword(credentialsId: 'docker-cred',
-          usernameVariable: "USERNAME",
-          passwordVariable: "PASSWORD"
-        )]) {
-          sh 'docker login --username $USERNAME --password $PASSWORD'
-          sh 'docker push lennonjansuy/webapp:dev'
-        } 
-      }
-    }
+    // stage("Push To DockerHub"){
+    //   steps {
+    //     withCredentials ([
+    //       usernamePassword(credentialsId: 'docker-cred',
+    //       usernameVariable: "USERNAME",
+    //       passwordVariable: "PASSWORD"
+    //     )]) {
+    //       sh 'docker login --username $USERNAME --password $PASSWORD'
+    //       sh 'docker push lennonjansuy/webapp:dev'
+    //     } 
+    //   }
+    // }
     stage("Push To Github"){
       steps {
         sh 'git config --global user.email "auto@jenkins.com"'
