@@ -39,7 +39,12 @@ pipeline {
       steps {
         sh 'git config --global user.email "auto@jenkins.com"'
         sh 'git config --global user.name "Jenkins"'
-        sh 'git remote add jenkins https://github.com/lenn0n/jenkins-post-build.git'
+        script {
+          String branch = sh 'git branch | grep "jenkins"'
+          if (branch != 'jenkins') {
+            sh 'git remote add jenkins https://github.com/lenn0n/jenkins-post-build.git'
+          }
+        }
         sh 'git add .'
         sh "git commit -m 'Commit from Jenkins'"
         withCredentials([gitUsernamePassword(credentialsId: 'gh-cred', gitToolName: 'Default')]) {
