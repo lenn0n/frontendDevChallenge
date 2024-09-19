@@ -46,7 +46,7 @@ pipeline {
           sh "git push -u origin HEAD:master"
         }
         catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE') {
-          sh "exit 1"
+          sh "exit 0"
         }
       }
     }
