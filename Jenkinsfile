@@ -40,7 +40,6 @@ pipeline {
         withCredentials([gitUsernamePassword(credentialsId: 'gh-cred', gitToolName: 'Default')]) {
           git credentialsId: 'gh-cred', url: 'https://github.com/lenn0n/jenkins-post-build.git'
           echo "${GIT_AUTHOR_EMAIL} ${GIT_COMMITTER_NAME}"
-          sh 'cd build'
           sh "echo 'node_modules' > .gitignore"
           sh 'git add .'
           sh "git commit -m 'Commit from Jenkins'"
