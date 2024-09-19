@@ -35,29 +35,16 @@ pipeline {
     //     } 
     //   }
     // }
-    stage("Push To Github"){
+    stage("Push To Github (Clone to other repo)"){
       steps {
-          withCredentials([gitUsernamePassword(credentialsId: 'gh-cred', gitToolName: 'Default')]) {
-          
-              sh 'git clone https://github.com/lenn0n/jenkins-post-build.git'
-              sh 'ls'
-              sh 'cp . neptune/jenkins-post-build'
-              sh 'cd neptune'
-              sh 'cd jenkins-post-build'
-              sh 'ls'
-              // git(
-              //     url: "https://github.com/lenn0n/jenkins-post-build.git",
-              //     branch: "master",
-              //     changelog: true,
-              //     poll: true
-              // )
-              // sh 'git config --global user.email "auto@jenkins.com"'
-              // sh 'git config --global user.name "Jenkins"'
-              // sh 'git add .'
-              // sh "git commit -m 'Commit from Jenkins'"
-              // sh "git push -u origin HEAD:master"
-            }
-        
+        withCredentials([gitUsernamePassword(credentialsId: 'gh-cred', gitToolName: 'Default')]) {
+          sh 'git clone https://github.com/lenn0n/jenkins-post-build.git'
+          sh 'cp build jenkins-post-build'
+          sh 'cd jenkins-post-build'
+          sh 'git add .'
+          sh "git commit -m 'Commit from Jenkins'"
+          sh "git push -u origin HEAD:master"
+        }
       }
     }
     stage("Push To EC2"){
