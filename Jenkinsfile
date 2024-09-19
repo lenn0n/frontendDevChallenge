@@ -43,7 +43,7 @@ pipeline {
         sh 'git add .'
         sh "git commit -m 'Commit from Jenkins'"
         withCredentials([gitUsernamePassword(credentialsId: 'gh-cred', gitToolName: 'Default')]) {
-            sh "git push -u origin HEAD:jenkins"
+            sh "git push -u jenkins HEAD:master"
         }
       }
     }
