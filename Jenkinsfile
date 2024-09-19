@@ -19,7 +19,7 @@ pipeline {
     }
     stage("Dockerize Application"){
       steps {
-          sh 'docker build -t webapp .'
+          sh 'docker build . -t lennonjansuy/webapp:dev'
           sh 'docker images'
       }
     }
@@ -31,7 +31,7 @@ pipeline {
           passwordVariable: "PASSWORD"
         )]) {
           sh 'docker login --username $USERNAME --password $PASSWORD'
-          sh 'docker push webapp:dev'
+          sh 'docker push lennonjansuy/webapp:dev'
         } 
       }
     }
