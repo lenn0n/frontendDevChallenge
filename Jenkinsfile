@@ -9,20 +9,20 @@ pipeline {
         }
       }
     }
-    stage("Build Application"){
-      steps {
-        nodejs(nodeJSInstallationName: 'nodejs') {
-          sh 'npm install'
-          sh 'npm run build'
-        }
-      }
-    }
-    stage("Dockerize Application"){
-      steps {
-          sh 'docker build . -t lennonjansuy/webapp:dev'
-          sh 'docker images'
-      }
-    }
+    // stage("Build Application"){
+    //   steps {
+    //     nodejs(nodeJSInstallationName: 'nodejs') {
+    //       sh 'npm install'
+    //       sh 'npm run build'
+    //     }
+    //   }
+    // }
+    // stage("Dockerize Application"){
+    //   steps {
+    //       sh 'docker build . -t lennonjansuy/webapp:dev'
+    //       sh 'docker images'
+    //   }
+    // }
     // stage("Push To DockerHub"){
     //   steps {
     //     withCredentials ([
@@ -39,17 +39,19 @@ pipeline {
       steps {
           withCredentials([gitUsernamePassword(credentialsId: 'gh-cred', gitToolName: 'Default')]) {
             dir("neptune") {
-              git(
-                  url: "https://github.com/lenn0n/jenkins-post-build.git",
-                  branch: "master",
-                  changelog: true,
-                  poll: true
-              )
-              sh 'git config --global user.email "auto@jenkins.com"'
-              sh 'git config --global user.name "Jenkins"'
-              sh 'git add .'
-              sh "git commit -m 'Commit from Jenkins'"
-              sh "git push -u origin HEAD:master"
+              sh 'git clone https://github.com/lenn0n/jenkins-post-build.git'
+              sh 'ls'
+              // git(
+              //     url: "https://github.com/lenn0n/jenkins-post-build.git",
+              //     branch: "master",
+              //     changelog: true,
+              //     poll: true
+              // )
+              // sh 'git config --global user.email "auto@jenkins.com"'
+              // sh 'git config --global user.name "Jenkins"'
+              // sh 'git add .'
+              // sh "git commit -m 'Commit from Jenkins'"
+              // sh "git push -u origin HEAD:master"
             }
         }
       }
