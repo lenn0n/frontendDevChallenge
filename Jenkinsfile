@@ -9,14 +9,14 @@ pipeline {
         }
       }
     }
-    // stage("Build Application"){
-    //   steps {
-    //     nodejs(nodeJSInstallationName: 'nodejs') {
-    //       sh 'npm install'
-    //       sh 'npm run build'
-    //     }
-    //   }
-    // }
+    stage("Build Application"){
+      steps {
+        nodejs(nodeJSInstallationName: 'nodejs') {
+          sh 'npm install'
+          sh 'npm run build'
+        }
+      }
+    }
     // stage("Dockerize Application"){
     //   steps {
     //       sh 'docker build . -t lennonjansuy/webapp:dev'
@@ -42,6 +42,7 @@ pipeline {
               sh 'git clone https://github.com/lenn0n/jenkins-post-build.git'
               sh 'cd ..'
               sh 'cp build neptune/jenkins-post-build'
+              sh 'ls'
               sh 'cd neptune'
               sh 'cd jenkins-post-build'
               sh 'ls'
