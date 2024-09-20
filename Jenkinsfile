@@ -1,7 +1,7 @@
 pipeline {
   agent any
   tools {
-    'org.jenkinsci.plugins.docker.commons.tools.DockerTool' '27.0.3'
+    'org.jenkinsci.plugins.docker.commons.tools.DockerTool' 'latest'
   }
   environment {
     DOCKER_CERT_PATH = credentials('docker-cred')
