@@ -25,8 +25,8 @@ pipeline {
     stage("Dockerize Application"){
       steps {
         script {
-              docker.build '-t lennonjansuy/webapp:dev'
-          sh 'docker images'
+          docker.build 'lennonjansuy/webapp:dev'
+          docker.images
         }
       }
     }
