@@ -3,9 +3,6 @@ pipeline {
   tools {
     'org.jenkinsci.plugins.docker.commons.tools.DockerTool' 'latest'
   }
-  environment {
-    DOCKER_CERT_PATH = credentials('docker-cred')
-  }
   stages {
     stage("Test Application"){
       steps {
