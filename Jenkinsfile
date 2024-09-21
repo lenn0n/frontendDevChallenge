@@ -30,7 +30,7 @@ pipeline {
           usernameVariable: "USERNAME",
           passwordVariable: "PASSWORD"
         )]) {
-          bat 'docker login --username $USERNAME --password-stdin $PASSWORD'
+          bat 'docker login --username $USERNAME --password $PASSWORD'
           bat 'docker push lennonjansuy/webapp:dev'
         } 
       }
