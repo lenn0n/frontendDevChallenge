@@ -2,7 +2,7 @@ pipeline {
   agent any
 
   stages {
-    stage("Test Application"){
+    stage("Test Application 2"){
       steps {
         nodejs(nodeJSInstallationName: 'nodejs') {
           bat 'npm run test'
