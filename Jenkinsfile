@@ -2,21 +2,21 @@ pipeline {
   agent any
 
   stages {
-    // stage("Test Application"){
-    //   steps {
-    //     nodejs(nodeJSInstallationName: 'nodejs') {
-    //       bat 'npm run test'
-    //     }
-    //   }
-    // }
-    // stage("Build Application"){
-    //   steps {
-    //     nodejs(nodeJSInstallationName: 'nodejs') {
-    //       bat 'npm install'
-    //       bat 'npm run build'
-    //     }
-    //   }
-    // }
+    stage("Test Application"){
+      steps {
+        nodejs(nodeJSInstallationName: 'nodejs') {
+          bat 'npm run test'
+        }
+      }
+    }
+    stage("Build Application"){
+      steps {
+        nodejs(nodeJSInstallationName: 'nodejs') {
+          bat 'npm install'
+          bat 'npm run build'
+        }
+      }
+    }
     stage("Dockerize Application"){
       steps {
           bat 'docker build . -t lennonjansuy/webapp:dev'
