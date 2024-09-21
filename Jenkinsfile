@@ -5,22 +5,22 @@ pipeline {
     stage("Test Application"){
       steps {
         nodejs(nodeJSInstallationName: 'nodejs') {
-          sh 'npm run test'
+          bat 'npm run test'
         }
       }
     }
     stage("Build Application"){
       steps {
         nodejs(nodeJSInstallationName: 'nodejs') {
-          sh 'npm install'
-          sh 'npm run build'
+          bat 'npm install'
+          bat 'npm run build'
         }
       }
     }
     stage("Dockerize Application"){
       steps {
-          sh 'docker build -t webapp .'
-          sh 'docker images'
+          bat 'docker build -t webapp .'
+          bat 'docker images'
       }
     }
     stage("Push To DockerHub"){
@@ -30,20 +30,20 @@ pipeline {
           usernameVariable: "USERNAME",
           passwordVariable: "PASSWORD"
         )]) {
-          sh 'docker login --username $USERNAME -- password PASSWORD'
-          sh 'docker push webapp:dev'
+          bat 'docker login --username $USERNAME -- password PASSWORD'
+          bat 'docker push webapp:dev'
         } 
       }
     }
     stage("Push To Github"){
       steps {
-        sh 'git config --global user.email "auto@jenkins.com"'
-        sh 'git config --global user.name "Jenkins"'
-        sh 'git remote add jenkins https://github.com/lenn0n/jenkins-post-build.git'
-        sh 'git add .'
-        sh "git commit -m 'Commit from Jenkins'"
+        bat 'git config --global user.email "auto@jenkins.com"'
+        bat 'git config --global user.name "Jenkins"'
+        bat 'git remote add jenkins https://github.com/lenn0n/jenkins-post-build.git'
+        bat 'git add .'
+        bat "git commit -m 'Commit from Jenkins'"
         withCredentials([gitUsernamePassword(credentialsId: 'gh-cred', gitToolName: 'Default')]) {
-            sh "git push -u origin HEAD:jenkins"
+            bat "git push -u origin HEAD:jenkins"
         }
       }
     }
