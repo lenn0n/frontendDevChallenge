@@ -1,43 +1,43 @@
 pipeline {
   agent any
   environment {
-    EMAIL_INFORM = 'lennonbenedictjansuy@gmail.com, gameoveralisa@gmail.com, lzlcy20@gmail.com'
+    EMAIL_INFORM = 'lennonbenedictjansuy@gmail.com, gameoveralisa@gmail.com'
   }
 
   stages {
-    stage("Test Application"){
-      steps {
-        nodejs(nodeJSInstallationName: 'nodejs') {
-          bat 'npm run test'
-        }
-      }
-    }
-    stage("Build Application"){
-      steps {
-        nodejs(nodeJSInstallationName: 'nodejs') {
-          bat 'npm install'
-          bat 'npm run build'
-        }
-      }
-    }
-    stage("Dockerize Application"){
-      steps {
-        bat 'docker build . -t lennonjansuy/webapp:dev'
-        bat 'docker images'
-      }
-    }
-    stage("Push To DockerHub"){
-      steps {
-        withCredentials ([
-          usernamePassword(credentialsId: 'docker-cred',
-          usernameVariable: "USERNAME",
-          passwordVariable: "PASSWORD"
-        )]) {
-              bat "docker login --username $USERNAME --password $PASSWORD"
-              bat 'docker push lennonjansuy/webapp:dev'
-        } 
-      }
-    }
+    // stage("Test Application"){
+    //   steps {
+    //     nodejs(nodeJSInstallationName: 'nodejs') {
+    //       bat 'npm run test'
+    //     }
+    //   }
+    // }
+    // stage("Build Application"){
+    //   steps {
+    //     nodejs(nodeJSInstallationName: 'nodejs') {
+    //       bat 'npm install'
+    //       bat 'npm run build'
+    //     }
+    //   }
+    // }
+    // stage("Dockerize Application"){
+    //   steps {
+    //     bat 'docker build . -t lennonjansuy/webapp:dev'
+    //     bat 'docker images'
+    //   }
+    // }
+    // stage("Push To DockerHub"){
+    //   steps {
+    //     withCredentials ([
+    //       usernamePassword(credentialsId: 'docker-cred',
+    //       usernameVariable: "USERNAME",
+    //       passwordVariable: "PASSWORD"
+    //     )]) {
+    //           bat "docker login --username $USERNAME --password $PASSWORD"
+    //           bat 'docker push lennonjansuy/webapp:dev'
+    //     } 
+    //   }
+    // }
     // stage("Push To Github (Clone build to other repo)"){
     //   steps {
     //     withCredentials([gitUsernamePassword(credentialsId: 'gh-cred', gitToolName: 'Default')]) {
@@ -60,14 +60,14 @@ pipeline {
           subject: "Pipeline Email Report - ${BUILD_DISPLAY_NAME}",
           body: """
             <html>
-              <header>
+              <head>
                 <style>
                   body {
                     background-color: white;
                     color: white
                   }
                 </style>
-              </header>
+              </head>
               <body>
                 <b>
                   A change was made to your repository. See the details below.
