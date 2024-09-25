@@ -52,10 +52,11 @@ pipeline {
       }
     }
     stage("Send Email Notification"){
-      steps {
-        def getGitBranchName() {
+         def getGitBranchName() {
             return scm.branches[0].name
         }
+      steps {
+     
         emailext (
           subject: "Test Subject",
           body: """
