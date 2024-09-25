@@ -41,10 +41,10 @@ pipeline {
           git credentialsId: 'gh-cred', url: 'https://github.com/lenn0n/jenkins-post-build.git'
           bat "echo 'node_modules' > .gitignore"
           bat 'git add .'
-          bat "git commit -m 'Commit from Jenkins' || echo 'CONTINUE'"
-          bat "git push -u origin HEAD:master || echo 'CONTINUE'"
+          bat 'git commit -m "Commit from Jenkins" || echo "GOT AN ERROR, JUST CONTINUE"'
+          bat 'git push -u origin HEAD:master || echo "GOT AN ERROR, JUST CONTINUE"'
         }
-      }
+      }`
     }
     stage("Push Build Folder in Linux Machines and Restart"){
       steps {
