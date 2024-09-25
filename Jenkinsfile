@@ -1,9 +1,5 @@
 pipeline {
   agent any
-  environment {
-    EMAIL_INFORM = 'lennonbenedictjansuy@gmail.com, gameoveralisa@gmail.com, lzlcy20@gmail.com'
-  }
-
   stages {
     // stage("Test Application"){
     //   steps {
@@ -56,52 +52,54 @@ pipeline {
     }
     stage("Send Email Notification"){
       steps {
-        emailext (
-          subject: "Pipeline Email Report - ${BUILD_DISPLAY_NAME}",
-          body: """
-            <html>
-              <head>
-                <style>
-                  .wrapper {
-                    background-color: rgba(0, 0, 0, 0.1);
-                    padding: 20px;
-                    border-radius: 20px;
-                  }
-                  .title {
-                    display: flex;
-                    gap: 10px;
-                  }
-                  h2 {
-                    padding-left: 10px;
-                  }
-                </style>
-              </head>
-              <body>
-              <div class="wrapper">
-                  <div class="title">
-                    <img src="https://avatars.githubusercontent.com/u/45531522?v=4" alt="" height="50px" width="50px"/>
-                    <h2>
-                      A change was made to your repository.
-                    </h2>
+        withCredentials([string(credentialsId: 'email-recipient', variable: 'recipients')]) {
+          emailext (
+            subject: "Pipeline Email Report - ${BUILD_DISPLAY_NAME}",
+            body: """
+              <html>
+                <head>
+                  <style>
+                    .wrapper {
+                      background-color: rgba(0, 0, 0, 0.1);
+                      padding: 20px;
+                      border-radius: 20px;
+                    }
+                    .title {
+                      display: flex;
+                      gap: 10px;
+                    }
+                    h2 {
+                      padding-left: 10px;
+                    }
+                  </style>
+                </head>
+                <body>
+                <div class="wrapper">
+                    <div class="title">
+                      <img src="https://avatars.githubusercontent.com/u/45531522?v=4" alt="" height="50px" width="50px"/>
+                      <h2>
+                        A change was made to your repository.
+                      </h2>
+                    </div>
+                    <p>This email was automatically generated after the build finished. See the details below.</p>
+                    <table border="0">
+                      <tr><td>Repository:     </td><td> ${GIT_URL}</td></tr>
+                      <tr><td>Branch:         </td><td> ${GIT_BRANCH}</td></tr>
+                      <tr><td>Commit:         </td><td> ${GIT_COMMIT}</td></tr>
+                      <tr><td>Build ID:       </td><td> ${env.BUILD_NUMBER}</td></tr>
+                      <tr><td>Job Name:       </td><td> ${env.JOB_NAME}</td></tr>
+                      <tr><td>Jenkins URL:    </td><td> ${env.JOB_URL}</td></tr>
+                    </table>
                   </div>
-                  <p>This email was automatically generated after the build finished. See the details below.</p>
-                  <table border="0">
-                    <tr><td>Repository:     </td><td> ${GIT_URL}</td></tr>
-                    <tr><td>Branch:         </td><td> ${GIT_BRANCH}</td></tr>
-                    <tr><td>Commit:         </td><td> ${GIT_COMMIT}</td></tr>
-                    <tr><td>Build ID:       </td><td> ${env.BUILD_NUMBER}</td></tr>
-                    <tr><td>Job Name:       </td><td> ${env.JOB_NAME}</td></tr>
-                    <tr><td>Jenkins URL:    </td><td> ${env.JOB_URL}</td></tr>
-                  </table>
-                </div>
-              </body>
-            </html>
-          """,
-          to: EMAIL_INFORM,
-          from: 'dev@lennonbenedictjansuy.com',
-          replyTo: 'no-reply@lenn0n.xyz',
-          mimeType: 'text/html'
-        )
+                </body>
+              </html>
+            """,
+            to: $recipients,
+            from: 'dev@lennonbenedictjansuy.com',
+            replyTo: 'no-reply@lenn0n.xyz',
+            mimeType: 'text/html'
+          )
+        }
       }
     }
     stage("Kubernetes Deployment Restart"){
