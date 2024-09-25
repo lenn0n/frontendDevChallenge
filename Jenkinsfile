@@ -54,7 +54,7 @@ pipeline {
     stage("Send Email Notification"){
       steps {
         emailext (
-          subject: "${jobName}",
+          subject: "Test Subject",
           body: """
             <html>
               <header>
