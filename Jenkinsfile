@@ -71,12 +71,12 @@ pipeline {
               </head>
               <body>
               <div class="wrapper">
-                  <b>
-                    A change was made to your repository. See the details below.
-                  </b>
-                  <p>This is just test of using SMTP in Jenkins. Nothing to worry about.</p>
+                  <h1>
+                    A change was made to your repository.
+                  </h1>
+                  <p>This email was automatically generated after the build finished. See the details below.</p>
                   <table border="0">
-                    <tr><td>GIT URL:        </td><td> ${GIT_URL}</td></tr>
+                    <tr><td>Repository:     </td><td> ${GIT_URL}</td></tr>
                     <tr><td>Branch:         </td><td> ${GIT_BRANCH}</td></tr>
                     <tr><td>Commit:         </td><td> ${GIT_COMMIT}</td></tr>
                     <tr><td>Build #:        </td><td> ${env.BUILD_NUMBER}</td></tr>
