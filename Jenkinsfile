@@ -58,10 +58,21 @@ pipeline {
           body: """
             <html>
               <header>
-
+                <style>
+                  body {
+                    background-color: white;
+                    color: white
+                  }
+                </style>
               </header>
               <body>
-                ${env}
+                <p>
+                  A changes was made in the branch '${BRANCH_NAME}. ' 
+                </p>
+                <div>BUILD #: ${BUILD_NUMBER}</div>
+                <div>BUILD NAME: ${BUILD_DISPLAY_NAME}</div>
+                <div>JOB NAME: ${JOB_NAME}</div>
+                <div>SERVER: ${JENKINS_URL}</div>
               </body>
             </html>
           """,
