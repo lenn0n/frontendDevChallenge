@@ -1,6 +1,8 @@
 pipeline {
   agent any
-
+     def getGitBranchName() {
+            return scm.branches[0].name
+        }
   stages {
     // stage("Test Application"){
     //   steps {
@@ -52,9 +54,7 @@ pipeline {
       }
     }
     stage("Send Email Notification"){
-         def getGitBranchName() {
-            return scm.branches[0].name
-        }
+    
       steps {
      
         emailext (
