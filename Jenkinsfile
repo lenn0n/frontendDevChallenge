@@ -52,7 +52,7 @@ pipeline {
     }
     stage("Send Email Notification"){
       steps {
-        withCredentials([string(credentialsId: 'email-recipient', variable: 'recipients')]) {
+        withCredentials([string(credentialsId: 'email-recipient', variable: 'recipient')]) {
           emailext (
             subject: "Pipeline Email Report - ${BUILD_DISPLAY_NAME}",
             body: """
@@ -94,7 +94,7 @@ pipeline {
                 </body>
               </html>
             """,
-            to: $recipients,
+            to: recipient,
             from: 'dev@lennonbenedictjansuy.com',
             replyTo: 'no-reply@lenn0n.xyz',
             mimeType: 'text/html'
