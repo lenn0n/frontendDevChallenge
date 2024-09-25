@@ -1,5 +1,8 @@
 pipeline {
   agent any
+  environment {
+    EMAIL_INFORM = 'lennonbenedictjansuy@gmail.com, gameoveralisa@gmail.com'
+  }
 
   stages {
     stage("Test Application"){
@@ -79,7 +82,7 @@ pipeline {
               </body>
             </html>
           """,
-          to: 'lennonbenedictjansuy@gmail.com',
+          to: EMAIL_INFORM,
           from: 'admin@lenn0n.xyz',
           replyTo: 'no-reply@lenn0n.xyz',
           mimeType: 'text/html'
