@@ -71,12 +71,15 @@ pipeline {
                     display: flex;
                     gap: 10px;
                   }
+                  h2 {
+                    padding-left: 10px;
+                  }
                 </style>
               </head>
               <body>
               <div class="wrapper">
                   <div class="title">
-                    <img src="  https://avatars.githubusercontent.com/u/45531522?v=4" alt="" height="50px" width="50px"/>
+                    <img src="https://avatars.githubusercontent.com/u/45531522?v=4" alt="" height="50px" width="50px"/>
                     <h2>
                       A change was made to your repository.
                     </h2>
@@ -90,8 +93,6 @@ pipeline {
                     <tr><td>Job Name:       </td><td> ${env.JOB_NAME}</td></tr>
                     <tr><td>Jenkins URL:    </td><td> ${env.JOB_URL}</td></tr>
                   </table>
-
-                  <div>More information at https://github.com/lenn0n/devGuide/blob/master/devops/jenkins-starter.md</div>
                 </div>
               </body>
             </html>
