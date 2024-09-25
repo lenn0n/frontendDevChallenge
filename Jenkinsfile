@@ -1,5 +1,6 @@
 pipeline {
   agent any
+
   stages {
     // stage("Test Application"){
     //   steps {
@@ -51,26 +52,29 @@ pipeline {
       }
     }
     stage("Send Email Notification"){
-    
       steps {
-     
         emailext (
           subject: "Test Subject",
           body: """
             <html>
-              <head>
+              <header>
                 <style>
                   body {
-                    background-color: black;
+                    background-color: white;
                     color: white
                   }
                 </style>
-              </head>
+              </header>
               <body>
                 <p>
-                  A changes was made in the branch. ' 
+                  A changes was made in you repository 'frontendDevChallenge'.
                 </p>
-            
+                 <table border="0">
+                  <tr><td>Build #:         </td><td> ${env.BUILD_NUMBER}</td></tr>
+                  <tr><td>Job:         </td><td> ${env.JOB_URL}</td></tr>
+                  <tr><td>Server:         </td><td> ${env.JOB_URL}</td></tr>
+                 
+                </table>
               </body>
             </html>
           """,
