@@ -44,7 +44,7 @@ pipeline {
           bat 'git commit -m "Commit from Jenkins" || echo "GOT AN ERROR, JUST CONTINUE"'
           bat 'git push -u origin HEAD:master || echo "GOT AN ERROR, JUST CONTINUE"'
         }
-      }`
+      }
     }
     stage("Push Build Folder in Linux Machines and Restart"){
       steps {
