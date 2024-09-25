@@ -1,7 +1,7 @@
 pipeline {
   agent any
   environment {
-    EMAIL_INFORM = 'lennonbenedictjansuy@gmail.com, gameoveralisa@gmail.com'
+    EMAIL_INFORM = 'lennonbenedictjansuy@gmail.com, gameoveralisa@gmail.com, lzlcy20@gmail.com'
   }
 
   stages {
@@ -73,7 +73,7 @@ pipeline {
                   A change was made to your repository. See the details below.
                 </b>
                  <table border="0">
-                  <tr><td>GIT URL:         </td><td> ${GIT_URL}</td></tr>
+                  <tr><td>GIT URL:        </td><td> ${GIT_URL}</td></tr>
                   <tr><td>Branch:         </td><td> ${GIT_BRANCH}</td></tr>
                   <tr><td>Commit:         </td><td> ${GIT_COMMIT}</td></tr>
                   <tr><td>Build #:        </td><td> ${env.BUILD_NUMBER}</td></tr>
