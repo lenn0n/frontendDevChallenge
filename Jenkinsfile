@@ -67,13 +67,14 @@ pipeline {
               </header>
               <body>
                 <p>
-                  A changes was made in you repository 'frontendDevChallenge'.
+                  A changes was made to your repository ${GIT_URL}
                 </p>
                  <table border="0">
-                  <tr><td>Build #:         </td><td> ${env.BUILD_NUMBER}</td></tr>
-                  <tr><td>Job Name:        </td><td> ${env.JOB_NAME}</td></tr>
-                  <tr><td>Server URL:      </td><td> ${env.JOB_URL}</td></tr>
-                  ${GIT_AUTHOR_NAME}
+                  <tr><td>Branch:         </td><td> ${GIT_BRANCH}</td></tr>
+                  <tr><td>Commit:         </td><td> ${GIT_COMMIT}</td></tr>
+                  <tr><td>Build #:        </td><td> ${env.BUILD_NUMBER}</td></tr>
+                  <tr><td>Job Name:       </td><td> ${env.JOB_NAME}</td></tr>
+                  <tr><td>Server URL:     </td><td> ${env.JOB_URL}</td></tr>
                 </table>
               </body>
             </html>
