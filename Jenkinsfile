@@ -57,7 +57,7 @@ pipeline {
     stage("Send Email Notification"){
       steps {
         emailext (
-          subject: "Pipeline Email Report",
+          subject: "Pipeline Email Report - ${BUILD_DISPLAY_NAME}",
           body: """
             <html>
               <header>
@@ -70,20 +70,20 @@ pipeline {
               </header>
               <body>
                 <p>
-                  A changes was made to your repository ${GIT_URL}
+                  A changes was made to your repository ${GIT_URL}.
                 </p>
                  <table border="0">
                   <tr><td>Branch:         </td><td> ${GIT_BRANCH}</td></tr>
                   <tr><td>Commit:         </td><td> ${GIT_COMMIT}</td></tr>
                   <tr><td>Build #:        </td><td> ${env.BUILD_NUMBER}</td></tr>
                   <tr><td>Job Name:       </td><td> ${env.JOB_NAME}</td></tr>
-                  <tr><td>Server URL:     </td><td> ${env.JOB_URL}</td></tr>
+                  <tr><td>Jenkins URL:    </td><td> ${env.JOB_URL}</td></tr>
                 </table>
               </body>
             </html>
           """,
           to: EMAIL_INFORM,
-          from: 'admin@lenn0n.xyz',
+          from: 'dev@lennonbenedictjansuy.com',
           replyTo: 'no-reply@lenn0n.xyz',
           mimeType: 'text/html'
         )
