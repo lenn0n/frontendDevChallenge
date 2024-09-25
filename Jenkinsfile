@@ -73,6 +73,7 @@ pipeline {
                   <tr><td>Build #:         </td><td> ${env.BUILD_NUMBER}</td></tr>
                   <tr><td>Job Name:        </td><td> ${env.JOB_NAME}</td></tr>
                   <tr><td>Server URL:      </td><td> ${env.JOB_URL}</td></tr>
+                  ${GIT_AUTHOR_NAME}
                 </table>
               </body>
             </html>
