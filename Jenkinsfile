@@ -53,6 +53,9 @@ pipeline {
     }
     stage("Send Email Notification"){
       steps {
+        def getGitBranchName() {
+            return scm.branches[0].name
+        }
         emailext (
           subject: "Test Subject",
           body: """
@@ -67,16 +70,16 @@ pipeline {
               </head>
               <body>
                 <p>
-                  A changes was made in the branch '${env.BRANCH_NAME}. ' 
+                  A changes was made in the branch '${getGitBranchName()}. ' 
                 </p>
-                <table border="0">
-                  <tr><td><b>Project:</b>  </td><td> <b>$PROJECT_NAME</b></td></tr>
-                  <tr><td>Build #:         </td><td> $BUILD_NUMBER</td></tr>
-                  <tr><td>Status:          </td><td> ${ENV, var="BUILD_STATUS"}</td></tr>
-                  <tr><td>Git reversion #: </td><td> ${ENV, var="GIT_COMMIT"}</td></tr>
-                  <tr><td>Git branch:      </td><td> ${ENV, var="GIT_BRANCH"}</td></tr>
-                  <tr><td>Changes:         </td><td> ${ENV, var="CHANGES"}</td></tr>
-                </table>
+                // <table border="0">
+                //   <tr><td><b>Project:</b>  </td><td> <b>$PROJECT_NAME</b></td></tr>
+                //   <tr><td>Build #:         </td><td> $BUILD_NUMBER</td></tr>
+                //   <tr><td>Status:          </td><td> ${env, var="BUILD_STATUS"}</td></tr>
+                //   <tr><td>Git reversion #: </td><td> ${env, var="GIT_COMMIT"}</td></tr>
+                //   <tr><td>Git branch:      </td><td> ${env, var="GIT_BRANCH"}</td></tr>
+                //   <tr><td>Changes:         </td><td> ${env, var="CHANGES"}</td></tr>
+                // </table>
               </body>
             </html>
           """,
