@@ -62,25 +62,28 @@ pipeline {
             <html>
               <head>
                 <style>
-                  body {
-                    background-color: white;
-                    color: white
+                  .wrapper {
+                    background-color: black;
+                    color: white;
+                    padding: 10px;
                   }
                 </style>
               </head>
               <body>
-                <b>
-                  A change was made to your repository. See the details below.
-                </b>
-                <p>This is just test of using SMTP in Jenkins. Nothing to worry about.</p>
-                 <table border="0">
-                  <tr><td>GIT URL:        </td><td> ${GIT_URL}</td></tr>
-                  <tr><td>Branch:         </td><td> ${GIT_BRANCH}</td></tr>
-                  <tr><td>Commit:         </td><td> ${GIT_COMMIT}</td></tr>
-                  <tr><td>Build #:        </td><td> ${env.BUILD_NUMBER}</td></tr>
-                  <tr><td>Job Name:       </td><td> ${env.JOB_NAME}</td></tr>
-                  <tr><td>Jenkins URL:    </td><td> ${env.JOB_URL}</td></tr>
-                </table>
+              <div class="wrapper">
+                  <b>
+                    A change was made to your repository. See the details below.
+                  </b>
+                  <p>This is just test of using SMTP in Jenkins. Nothing to worry about.</p>
+                  <table border="0">
+                    <tr><td>GIT URL:        </td><td> ${GIT_URL}</td></tr>
+                    <tr><td>Branch:         </td><td> ${GIT_BRANCH}</td></tr>
+                    <tr><td>Commit:         </td><td> ${GIT_COMMIT}</td></tr>
+                    <tr><td>Build #:        </td><td> ${env.BUILD_NUMBER}</td></tr>
+                    <tr><td>Job Name:       </td><td> ${env.JOB_NAME}</td></tr>
+                    <tr><td>Jenkins URL:    </td><td> ${env.JOB_URL}</td></tr>
+                  </table>
+                </div>
               </body>
             </html>
           """,
