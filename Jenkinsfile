@@ -72,6 +72,7 @@ pipeline {
                 <b>
                   A change was made to your repository. See the details below.
                 </b>
+                <p>This is just test of using SMTP in Jenkins. Nothing to worry about.</p>
                  <table border="0">
                   <tr><td>GIT URL:        </td><td> ${GIT_URL}</td></tr>
                   <tr><td>Branch:         </td><td> ${GIT_BRANCH}</td></tr>
