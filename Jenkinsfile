@@ -57,22 +57,22 @@ pipeline {
           subject: "Test Subject",
           body: """
             <html>
-              <header>
+              <head>
                 <style>
                   body {
-                    background-color: white;
+                    background-color: black;
                     color: white
                   }
                 </style>
-              </header>
+              </head>
               <body>
                 <p>
                   A changes was made in the branch '${env.BRANCH_NAME}. ' 
                 </p>
-                <div>BUILD #: ${env.BUILD_NUMBER}</div>
-                <div>BUILD NAME: ${env.BUILD_DISPLAY_NAME}</div>
-                <div>JOB NAME: ${env.JOB_NAME}</div>
-                <div>SERVER: ${env.JENKINS_URL}</div>
+                <div>Build Number: ${env.BUILD_NUMBER}</div>
+                <div>Job: ${env.JOB_NAME}</div>
+                <div>Server: ${env.JOB_URL}</div>
+                <div>FULL RESULTS: ${JSON.stringify(env)}</div>
               </body>
             </html>
           """,
