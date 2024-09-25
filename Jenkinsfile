@@ -63,17 +63,24 @@ pipeline {
               <head>
                 <style>
                   .wrapper {
-                    background-color: black;
-                    color: white;
-                    padding: 10px;
+                    background-color: rgba(0, 0, 0, 0.1);
+                    padding: 20px;
+                    border-radius: 20px;
+                  }
+                  .title {
+                    display: flex;
+                    gap: 10px;
                   }
                 </style>
               </head>
               <body>
               <div class="wrapper">
-                  <h1>
-                    A change was made to your repository.
-                  </h1>
+                  <div class="title">
+                    <img src="  https://avatars.githubusercontent.com/u/45531522?v=4" alt="" height="50px" width="50px"/>
+                    <h2>
+                      A change was made to your repository.
+                    </h2>
+                  </div>
                   <p>This email was automatically generated after the build finished. See the details below.</p>
                   <table border="0">
                     <tr><td>Repository:     </td><td> ${GIT_URL}</td></tr>
@@ -83,6 +90,8 @@ pipeline {
                     <tr><td>Job Name:       </td><td> ${env.JOB_NAME}</td></tr>
                     <tr><td>Jenkins URL:    </td><td> ${env.JOB_URL}</td></tr>
                   </table>
+
+                  <div>More information at https://github.com/lenn0n/devGuide/blob/master/devops/jenkins-starter.md</div>
                 </div>
               </body>
             </html>
