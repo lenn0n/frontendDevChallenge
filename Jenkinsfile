@@ -71,8 +71,8 @@ pipeline {
                 </p>
                  <table border="0">
                   <tr><td>Build #:         </td><td> ${env.BUILD_NUMBER}</td></tr>
-                  <tr><td>Job:         </td><td> ${env.JOB_URL}</td></tr>
-                  <tr><td>Server:         </td><td> ${env.JOB_URL}</td></tr>
+                  <tr><td>Job Name:         </td><td> ${env.JOB_NAME}</td></tr>
+                  <tr><td>Server URL:         </td><td> ${env.JOB_URL}</td></tr>
                  
                 </table>
               </body>
