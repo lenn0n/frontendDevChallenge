@@ -1,8 +1,5 @@
 pipeline {
   agent any
-     def getGitBranchName() {
-            return scm.branches[0].name
-        }
   stages {
     // stage("Test Application"){
     //   steps {
@@ -71,7 +68,7 @@ pipeline {
               </head>
               <body>
                 <p>
-                  A changes was made in the branch '${getGitBranchName()}. ' 
+                  A changes was made in the branch. ' 
                 </p>
             
               </body>
