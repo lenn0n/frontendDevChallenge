@@ -72,7 +72,6 @@ pipeline {
                 <div>Build Number: ${env.BUILD_NUMBER}</div>
                 <div>Job: ${env.JOB_NAME}</div>
                 <div>Server: ${env.JOB_URL}</div>
-                <div>FULL RESULTS: ${JSON.stringify(env)}</div>
               </body>
             </html>
           """,
