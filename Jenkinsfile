@@ -38,17 +38,17 @@ pipeline {
         } 
       }
     }
-    stage("Push To Github (Clone build to other repo)"){
-      steps {
-        withCredentials([gitUsernamePassword(credentialsId: 'gh-cred', gitToolName: 'Default')]) {
-          git credentialsId: 'gh-cred', url: 'https://github.com/lenn0n/jenkins-post-build.git'
-          bat "echo 'node_modules' > .gitignore"
-          bat 'git add .'
-          bat 'git commit -m "Commit from Jenkins" || echo "GOT AN ERROR, JUST CONTINUE"'
-          bat 'git push -u origin HEAD:master || echo "GOT AN ERROR, JUST CONTINUE"'
-        }
-      }
-    }
+    // stage("Push To Github (Clone build to other repo)"){
+    //   steps {
+    //     withCredentials([gitUsernamePassword(credentialsId: 'gh-cred', gitToolName: 'Default')]) {
+    //       git credentialsId: 'gh-cred', url: 'https://github.com/lenn0n/jenkins-post-build.git'
+    //       bat "echo 'node_modules' > .gitignore"
+    //       bat 'git add .'
+    //       bat 'git commit -m "Commit from Jenkins" || echo "GOT AN ERROR, JUST CONTINUE"'
+    //       bat 'git push -u origin HEAD:master || echo "GOT AN ERROR, JUST CONTINUE"'
+    //     }
+    //   }
+    // }
     stage("Push Build Folder in Linux Machines and Restart"){
       steps {
       echo 'TBD'
