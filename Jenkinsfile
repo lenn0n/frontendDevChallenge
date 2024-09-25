@@ -46,9 +46,30 @@ pipeline {
         }
       }
     }
+    stage("Send Email Notification"){
+      steps {
+        sh ''
+      }
+    }
     stage("Push Build Folder in Linux Machines and Restart"){
       steps {
-        echo 'TBD'
+        emailext (
+          subject: "${jobName}",
+          body: """
+            <html>
+              <header>
+
+              </header>
+              <body>
+                ${env}
+              </body>
+            </html>
+          """,
+          to: 'lennonbenedictjansuy@gmail.com',
+          from: 'admin@lenn0n.xyz',
+          replyTo: 'no-reply@lenn0n.xyz',
+          mimeType: 'text/html'
+        )
       }
     }
     stage("Kubernetes Deployment Restart"){
