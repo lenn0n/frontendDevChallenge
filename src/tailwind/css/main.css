@@ -4,6 +4,10 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+	@apply bg-[#F0F0EC]
+}
+
 .checkout-header {
 	font-family: Montserrat;
 	font-weight: 600;
